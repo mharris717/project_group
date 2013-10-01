@@ -3,7 +3,7 @@ module ProjectGroup
     include FromHash
     attr_accessor :path
     def name
-      "thing"
+      raise "name call"
     end
     def cmd(str)
       c = "cd #{path} && #{str}"
@@ -68,7 +68,12 @@ module ProjectGroup
     end
 
     fattr(:remote_ref) do
-      repo.remotes.find { |x| x.name == "origin/master" }.tap { |x| raise "no remote for #{name}" unless x }.commit.to_s
+      remote = repo.remotes.find { |x| x.name == "origin/master" }
+      if remote
+        remote.commit.to_s
+      else
+        nil
+      end
     end
     fattr(:local_ref) do
       repo.commits("master",1).first.sha.to_s

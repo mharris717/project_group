@@ -7,41 +7,65 @@ describe "Repo" do
     2.should == 2
   end
 
-  before(:all) do
-    MakeInitial.make do
-      project "foo" do
-        create "a.txt"
-      end
+  describe "basic" do
+    include_context "project"
+    project do
+      create "a.txt"
+      push
+    end
 
-      project "bar" do
-        create "a.txt"
-        File.create "b.txt","zzz"
-      end
+    it 'changed files' do
+      proj.uncommitted_files.size.should == 0
     end
   end
 
-  let(:foo) do
-    dir = File.expand_path(File.dirname(__FILE__) + "/../tmp/projects/foo")
-    ProjectGroup::Single.new(:path => dir)
-  end
+  describe "changed files" do
+    include_context "project"
+    project do
+      create "a.txt"
+      File.create "b.txt","zzz"
+    end
 
-  let(:bar) do
-    dir = File.expand_path(File.dirname(__FILE__) + "/../tmp/projects/bar")
-    ProjectGroup::Single.new(:path => dir)
-  end
-
-  it 'changed files' do
-    foo.uncommitted_files.size.should == 0
-  end
-
-  it 'changed files 2' do
-    bar.uncommitted_files.tap do |a|
-      a.size.should == 1
-      a.first.relative_path.should == "b.txt"
+    it 'changed files' do
+      proj.uncommitted_files.size.should == 1
     end
   end
 
-  it 'push' do
-    foo.should be_needs_push
+  describe "pushed" do
+    include_context "project"
+    project do
+      create "a.txt"
+      push
+    end
+
+    it 'pushed' do
+      proj.should_not be_needs_push
+    end
   end
+
+  describe "not pushed" do
+    include_context "project"
+    project do
+      create "a.txt"
+      push
+      create "b.txt"
+    end
+
+    it 'pushed' do
+      proj.should be_needs_push
+    end
+  end
+
+  describe "not pushed - no origin/master" do
+    include_context "project"
+    project do
+      create "a.txt"
+    end
+
+    it 'pushed' do
+      proj.should be_needs_push
+    end
+  end
+
+
 end

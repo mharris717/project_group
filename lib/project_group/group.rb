@@ -8,5 +8,8 @@ module ProjectGroup
     def uncommitted_files
       singles.map { |x| x.uncommitted_files }.flatten
     end
+    def needs_push?
+      singles.any? { |x| x.needs_push? }
+    end
   end
 end
