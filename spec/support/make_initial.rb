@@ -6,15 +6,13 @@ class MakeInitial
     "#{tmp_dir}/projects"
   end
   def with_projects(&b)
-    Dir.chdir(tmp_dir) do
-      `rm -rf projects` if FileTest.exists?("projects")
-      `mkdir projects`
-      Dir.chdir("projects",&b)
-    end
+    ec "rm -rf #{tmp_dir}" if FileTest.exists?(tmp_dir)
+    ec "mkdir -p #{projects_dir}"
+    Dir.chdir(projects_dir,&b)
   end
   def ec(cmd)
     res = `#{cmd}`
-    puts res
+    #puts res
     res
   end
   def git(cmd)
