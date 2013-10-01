@@ -8,6 +8,6 @@ module ProjectGroup
     end
   end
 end
-%w(single repo group).each do |f|
+%w(single repo group command).each do |f|
   load File.dirname(__FILE__) + "/project_group/#{f}.rb"
 end
