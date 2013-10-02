@@ -6,7 +6,7 @@ module ProjectGroup
     fattr(:name) do
       File.basename(path)
     end
-    fattr(:repo) do
+    def repo
       Repo.new(:path => path)
     end
     def uncommitted_files
