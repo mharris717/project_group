@@ -78,7 +78,11 @@ module ProjectGroup
       end
     end
     fattr(:local_ref) do
-      repo.commits("master",1).first.sha.to_s
+      res = repo.commits("master",1).first
+      if !res
+        raise "no local ref for #{path} " + `cd #{path} && ls`
+      end
+      res.sha.to_s
     end
     def pushed?
       remote_ref == local_ref
