@@ -1,5 +1,9 @@
 require 'mharris_ext'
 require 'grit'
+require 'ostruct'
+require 'json'
+require 'optparse'
+require 'andand'
 
 module ProjectGroup
   class << self
@@ -8,6 +12,7 @@ module ProjectGroup
     end
   end
 end
-%w(single repo group command).each do |f|
+
+%w(single repo group command config sublime_project).each do |f|
   load File.dirname(__FILE__) + "/project_group/#{f}.rb"
 end

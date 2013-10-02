@@ -12,6 +12,8 @@ class MakeInitial
     ec "rm -rf #{tmp_dir}" if FileTest.exists?(tmp_dir)
     ec "mkdir -p #{projects_dir}"
     ec "mkdir #{origin_dir}"
+    ec "mkdir #{tmp_dir}/configs"
+    ec "mkdir #{tmp_dir}/tmp1"
     Dir.chdir(projects_dir,&b)
   end
   def ec(cmd)
@@ -80,6 +82,9 @@ class MakeInitial
     def run(&b)
       res = new
       res.run(&b)
+    end
+    def tmp_dir
+      new.tmp_dir
     end
   end
 end

@@ -1,6 +1,7 @@
 module ProjectGroup
   class Group
     include FromHash
+    attr_accessor :name
     fattr(:singles) { [] }
     def <<(path)
       self.singles << Single.new(:path => path)

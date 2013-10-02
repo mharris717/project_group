@@ -2,5 +2,6 @@
 
 load File.dirname(__FILE__) + "/../lib/project_group.rb"
 
-cmd = ProjectGroup::Command.new(:cmd => ARGV.first)
+cmd = ProjectGroup::Command.new
+cmd.parse! ARGV
 cmd.run!
