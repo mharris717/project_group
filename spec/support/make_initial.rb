@@ -106,6 +106,7 @@ shared_context "project" do
           end
         end
       end
+      sleep(0.1)
     end
   end
 
