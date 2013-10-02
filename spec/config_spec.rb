@@ -7,6 +7,7 @@ shared_context "config" do
   let(:local_config_body) { "" }
   let(:config_body) { "" }
   before(:all) do
+    MakeInitial.make
     File.create("#{MakeInitial.tmp_dir}/configs/ezq.rb", config_body)
     File.create("#{MakeInitial.tmp_dir}/tmp1/.project_group.rb", local_config_body) 
 
