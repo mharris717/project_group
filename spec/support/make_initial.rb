@@ -48,7 +48,7 @@ class MakeInitial
   def create(file,body="abc")
     File.create file,body
     git "add #{file}"
-    git "commit -m #{file}"
+    git "commit -m #{file} --author=\"John Smith <johnsmith@fake.com>\""
   end
 
   def innerx
