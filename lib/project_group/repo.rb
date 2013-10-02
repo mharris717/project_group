@@ -80,7 +80,7 @@ module ProjectGroup
     fattr(:local_ref) do
       res = repo.commits("master",1).first
       if !res
-        raise "no local ref for #{path} " + `cd #{path} && ls`
+        raise "no local ref for #{path} " + `cd #{path} && ls -al`
       end
       res.sha.to_s
     end
