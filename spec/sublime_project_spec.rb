@@ -14,6 +14,6 @@ describe 'Sublime Project' do
 
   it 'smoke' do
     str = sublime_project.to_json
-    File.create "/code/orig/project_group/ezq.sublime-project",str
+    #File.create "/code/orig/project_group/ezq.sublime-project",str
   end
 end

@@ -19,6 +19,8 @@ module ProjectGroup
     end
 
     fattr(:repo) do
+      raise "path doesn't exist #{path}" unless FileTest.exist?(path)
+      raise "git path doesn't exist #{path}" unless FileTest.exist?("#{path}/.git")
       Grit::Repo.new(path)
     end
 
