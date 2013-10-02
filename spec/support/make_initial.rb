@@ -36,6 +36,8 @@ class MakeInitial
     ec "mkdir #{name}"
     Dir.chdir(name) do
       ec "git init"
+      ec "git config user.email johnsmith@fake.com"
+      ec "git config user.name \"John Smith\""
       git "remote add origin file://#{tmp_dir}/origin/#{name}.git"
       yield
     end
@@ -48,7 +50,7 @@ class MakeInitial
   def create(file,body="abc")
     File.create file,body
     git "add #{file}"
-    git "commit -m #{file} --author=\"John Smith <johnsmith@fake.com>\""
+    git "commit -m #{file}"
   end
 
   def innerx
