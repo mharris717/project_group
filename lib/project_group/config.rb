@@ -93,6 +93,10 @@ module ProjectGroup
       def group(name,&b)
         instance.group(name,&b)
       end
+
+      def get_group(name)
+        loaded.groups.find { |x| x.name == name }.tap { |x| raise "no group #{name}" unless x }
+      end
     end
   end
 end
