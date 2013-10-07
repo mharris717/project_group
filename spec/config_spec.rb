@@ -105,6 +105,45 @@ describe "ProjectGroup::Config" do
     end
   end
 
+  describe "current dir group" do
+    include_context "config"
+    include_context "project"
+
+    project "foo" do
+      create "a.txt"
+    end
+
+    project "bar" do
+      create "a.txt"
+    end
+
+    let(:config_body) do
+      "ProjectGroup::Configs.group 'ezq' do |g|
+        g.project 'ezq' do |p|
+          p.path '#{MakeInitial.tmp_dir}/projects/foo'
+        end
+      end
+
+      ProjectGroup::Configs.group 'thing' do |g|
+        g.project 'other' do |p|
+          p.path '#{MakeInitial.tmp_dir}/projects/bar'
+        end
+      end"
+    end
+
+    it 'dir' do
+      dir = "#{MakeInitial.tmp_dir}/projects/foo"
+      ProjectGroup::Configs.loaded.group_for_dir(dir).name.should == 'ezq'
+    end
+
+    it 'bar' do
+      dir = "#{MakeInitial.tmp_dir}/projects/bar"
+      ProjectGroup::Configs.loaded.group_for_dir(dir).name.should == 'thing'
+    end
+
+    
+  end
+
   describe "local project file" do
     include_context "config"
     let(:local_config_body) do

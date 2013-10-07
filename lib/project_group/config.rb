@@ -81,6 +81,18 @@ module ProjectGroup
       local_config.andand.loaded_group
     end
 
+    def group_for_dir(dir)
+      dir = File.expand_path(dir)
+      dir = dir.gsub("/Users/mharris717/Dropbox/CodeLink","/code")
+      groups.find do |group|
+        group.singles.any? do |proj|
+          path = File.expand_path(proj.path)
+          path = path.gsub("/Users/mharris717/Dropbox/CodeLink","/code")
+          File.expand_path(path) == dir
+        end
+      end
+    end
+
     class << self
       fattr(:instance) { new }
       fattr(:loaded) do

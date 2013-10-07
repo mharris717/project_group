@@ -12,8 +12,10 @@ module ProjectGroup
     fattr(:group) do
       if group_name
         Configs.loaded.groups.find { |x| x.name == group_name }
-      else
+      elsif Configs.loaded.local_group
         Configs.loaded.local_group
+      elsif Configs.loaded.group_for_dir(Dir.getwd)
+        Configs.loaded.group_for_dir(Dir.getwd)
       end.tap { |x| raise "no group #{group_name}" unless x }
     end
 
