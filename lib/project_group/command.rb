@@ -1,16 +1,37 @@
 module ProjectGroup
   class Command
     include FromHash
-    attr_accessor :cmd, :group_name
+    attr_accessor :cmd, :group_name, :project_name
+
+    fattr(:configs) do
+      Configs.loaded
+    end
+
+    fattr(:dir) do
+      Dir.getwd
+    end
 
     fattr(:group) do
       if group_name
-        Configs.loaded.groups.find { |x| x.name == group_name }
+        configs.groups.find { |x| x.name == group_name }
       elsif Configs.loaded.local_group
-        Configs.loaded.local_group
-      elsif Configs.loaded.group_for_dir(Dir.getwd)
-        Configs.loaded.group_for_dir(Dir.getwd)
+        configs.local_group
+      elsif Configs.loaded.group_for_dir(dir)
+        configs.group_for_dir(dir)
       end.tap { |x| raise "no group #{group_name}" unless x }
+    end
+
+    def singles
+      if project_name
+        res = configs.all_singles.select { |x| x.name == project_name }
+        groupx = configs.group_for_dir(dir)
+        if groupx
+          res += groupx.singles.select { |x| x.short_name == project_name }
+        end
+        res.uniq
+      else
+        group.singles
+      end
     end
 
     def run!
@@ -71,6 +92,10 @@ module ProjectGroup
 
         opts.on("-n", "--name name", "Group Name") do |v|
           self.group_name = v
+        end
+
+        opts.on("-p", "--projectname name", "Project Name") do |v|
+          self.project_name = v
         end
       end.parse!(args)
     end

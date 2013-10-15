@@ -42,6 +42,7 @@ module ProjectGroup
   end
 
   class Configs
+    include FromHash
     fattr(:dir) do
       File.expand_path("~/.project_group")
     end

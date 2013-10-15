@@ -26,5 +26,69 @@ describe "Command" do
     end
   end
 
+  describe "basic" do
+    include_context "project"
+    let(:should_setup_file_system) { false }
+
+    project "foo" do
+      create "a.txt"
+      push
+    end
+
+    project "bar" do
+      create "a.txt"
+      File.create "b.txt","zzz"
+    end
+
+    let(:command) do
+      res = ProjectGroup::Command.new
+      res.configs = ProjectGroup::Configs.new(:groups => [group])
+      res.parse! full_command.split(" ")
+      res
+    end
+
+    let(:full_command) do
+      "cycle -n abc"
+    end
+
+    it 'group name' do
+      command.group.name.should == 'abc'
+    end
+
+    it 'singles' do
+      command.singles.map { |x| x.short_name }.sort.should == ['foo','bar'].sort
+    end
+  end
+
+  describe "works on project" do
+    include_context "project"
+    let(:should_setup_file_system) { false }
+
+    project "foo" do
+      create "a.txt"
+      push
+    end
+
+    project "bar" do
+      create "a.txt"
+      File.create "b.txt","zzz"
+    end
+
+    let(:command) do
+      res = ProjectGroup::Command.new
+      res.configs = ProjectGroup::Configs.new(:groups => [group])
+      res.parse! full_command.split(" ")
+      res
+    end
+
+    let(:full_command) do
+      "cycle -p foo"
+    end
+
+    it 'singles' do
+      command.dir = singles.first.path
+      command.singles.map { |x| x.short_name }.should == ['foo']
+    end
+  end
 
 end

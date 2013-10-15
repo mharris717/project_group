@@ -115,13 +115,15 @@ shared_context "project" do
   let(:names) { self.class.project_blocks.keys }
   let(:name) { names.first }
 
+  let(:should_setup_file_system) { true }
+
   before(:all) do
-    self.class.setup_projects
+    self.class.setup_projects if should_setup_file_system
   end
 
   def make_project(name)
     dir = File.expand_path(File.dirname(__FILE__) + "/../../tmp/projects/#{name}")
-    ProjectGroup::Single.new(:path => dir)
+    ProjectGroup::Single.new(:path => dir, :name => "abc-#{name}", :short_name => name)
   end
 
   let(:proj) do
@@ -132,7 +134,7 @@ shared_context "project" do
   end
 
   let(:group) do
-    ProjectGroup::Group.new(:singles => singles)
+    ProjectGroup::Group.new(:singles => singles, :name => "abc")
   end
 
 end
