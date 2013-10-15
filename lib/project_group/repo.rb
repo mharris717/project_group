@@ -7,9 +7,9 @@ module ProjectGroup
     end
     def cmd(str)
       c = "cd #{path} && #{str}"
-      puts c
+      #puts c
       res = ProjectGroup.ec(c)
-      puts res
+      #puts res
       res
     end
     def git(*args)

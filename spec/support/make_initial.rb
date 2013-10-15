@@ -17,9 +17,9 @@ class MakeInitial
     Dir.chdir(projects_dir,&b)
   end
   def ec(cmd)
-    puts cmd
+    #puts cmd
     res = `#{cmd} 2>&1`
-    puts res
+    #puts res
     res
   end
   def git(cmd)

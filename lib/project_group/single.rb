@@ -2,7 +2,7 @@ module ProjectGroup
   class Single
     include FromHash
 
-    attr_accessor :path, :name
+    attr_accessor :path, :name, :type
     fattr(:name) do
       File.basename(path)
     end

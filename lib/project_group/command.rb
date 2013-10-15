@@ -50,6 +50,10 @@ module ProjectGroup
       end
     end
 
+    def config
+      ec "subl ~/.project_group"
+    end
+
     def git
       group.singles.each do |proj|
         if proj.repo.changes?
@@ -57,6 +61,12 @@ module ProjectGroup
           puts "Enter to Continue"
           STDIN.gets
         end
+      end
+    end
+
+    def list
+      Configs.loaded.groups.each do |g|
+        puts g.name
       end
     end
 

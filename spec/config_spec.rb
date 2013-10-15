@@ -35,6 +35,7 @@ describe "ProjectGroup::Config" do
     let(:config_body) do
       'ProjectGroup::Configs.project "ezq" do |p|
          p.path "abc"
+         p.type :eak
       end'
     end
     
