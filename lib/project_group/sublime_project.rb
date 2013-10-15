@@ -4,7 +4,7 @@ module ProjectGroup
     attr_accessor :group
     def as_json
       folders = group.singles.map do |proj|
-        {"path" => proj.path, "name" => proj.name, "folder_exclude_patterns" => ["tmp","junk",".bundle","dist"]}
+        {"path" => proj.path, "name" => proj.short_name, "folder_exclude_patterns" => ["tmp","junk",".bundle","dist"]}
       end
       {"folders" => folders}
     end

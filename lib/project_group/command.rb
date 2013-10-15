@@ -3,12 +3,6 @@ module ProjectGroup
     include FromHash
     attr_accessor :cmd, :group_name
 
-    fattr(:groupx) do
-      res = Group.new
-      res << "/code/orig/project_group"
-      res
-    end
-
     fattr(:group) do
       if group_name
         Configs.loaded.groups.find { |x| x.name == group_name }

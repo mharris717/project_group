@@ -104,6 +104,10 @@ describe "ProjectGroup::Config" do
     it 'project path' do
       group.singles.map { |x| x.path }.should == ['/code/orig/ezq']
     end
+
+    it 'name has group prefix' do
+      group.singles.first.name.should == "ezq-ezq"
+    end
   end
 
   describe "current dir group" do

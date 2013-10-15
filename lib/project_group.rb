@@ -13,6 +13,14 @@ module ProjectGroup
   end
 end
 
-%w(single repo group command config sublime_project run_tests).each do |f|
-  load File.dirname(__FILE__) + "/project_group/#{f}.rb"
+module ProjectGroup
+  class << self
+    def load!
+      %w(single repo group command config sublime_project run_tests).each do |f|
+        load File.dirname(__FILE__) + "/project_group/#{f}.rb"
+      end
+    end
+  end
 end
+
+ProjectGroup.load!

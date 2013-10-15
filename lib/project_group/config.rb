@@ -28,13 +28,16 @@ module ProjectGroup
       obj.singles = singles
       obj
     end
-    def project(name,&b)
-      self.project_names << name
+    def project(proj_name,&b)
+      orig_proj_name = proj_name
+      proj_name = "#{name}-#{proj_name}" if block_given?
+      self.project_names << proj_name
       if block_given?
-        configs.project(name,&b)
+        res = configs.project(proj_name,&b)
+        res.short_name = orig_proj_name
       end
     end
-    def name(name)
+    def namex(name)
     end
   end
 
@@ -62,11 +65,16 @@ module ProjectGroup
     fattr(:groups) do
       group_configs.map { |x| x.loaded_group }
     end
+    def all_singles
+      groups.map { |x| x.singles }.flatten
+    end
+
 
     def project(name,&b)
       c = DSLWrapper.new(Single.new(:name => name))
       b[c]
       self.projects << c.obj
+      c.obj
     end
 
     def group(name,&b)
@@ -91,6 +99,18 @@ module ProjectGroup
           File.expand_path(path) == dir
         end
       end
+    end
+
+    def single_for_dir(dir,ops={})
+      dir = File.expand_path(dir)
+      dir = dir.gsub("/Users/mharris717/Dropbox/CodeLink","/code")
+      res = all_singles.find do |proj|
+        path = File.expand_path(proj.path)
+        path = path.gsub("/Users/mharris717/Dropbox/CodeLink","/code")
+        File.expand_path(path) == dir
+      end
+      raise "no single for #{dir}, options are " + all_singles.map { |x| x.path }.join("\n") if !res && ops[:safe]
+      res
     end
 
     class << self

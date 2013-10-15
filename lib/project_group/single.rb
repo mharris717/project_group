@@ -3,6 +3,7 @@ module ProjectGroup
     include FromHash
 
     attr_accessor :path, :name, :type
+    fattr(:short_name) { name }
     fattr(:name) do
       File.basename(path)
     end
