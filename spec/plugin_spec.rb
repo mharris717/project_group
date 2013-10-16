@@ -22,7 +22,7 @@ describe "Plugin" do
 
     before do
       ProjectGroup::Plugins.instance!
-      ProjectGroup.register(:thing) do |p|
+      ProjectGroup.register_plugin(:thing) do |p|
         $thing_names << p.short_name
       end
       $thing_names = []

@@ -106,6 +106,12 @@ module ProjectGroup
       end
     end
 
+    def gemspec
+      singles.each do |proj|
+        puts `cd #{proj.base_path} && rake gemspec`
+      end
+    end
+
     def release
       gemspec = lambda do |proj|
         puts `cd #{proj.base_path} && rake gemspec`
