@@ -104,8 +104,25 @@ module ProjectGroup
       while one[].size > 0
         a = 4
       end
+    end
 
+    def release
+      gemspec = lambda do |proj|
+        `cd #{proj.base_path} && rake gemspec`
+      end
+      one = lambda do
+        singles.each { |x| gemspec[x] }
+        singles.select { |proj| proj.repo.changes? || !proj.repo.pushed? }.each do |proj|
+          ec "gittower #{proj.path}"
+          puts "Enter to Continue"
+          STDIN.gets
+          gemspec[proj]
+        end
+      end
 
+      while one[].size > 0
+        a = 4
+      end
     end
 
     def list
