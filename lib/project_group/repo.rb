@@ -39,7 +39,7 @@ module ProjectGroup
     end
 
     def use_file?(f)
-      return false if %w(build tmp log pkg vendor junk).any? { |x| x == f.split("/").first }
+      return false if %w(build tmp log pkg vendor junk doc).any? { |x| x == f.split("/").first }
       return false if f =~ /public\/assets/
       return false if f.split(".").last == "log"
       return false if f =~ /testflight_launcher/
