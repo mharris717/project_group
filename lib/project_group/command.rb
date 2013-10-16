@@ -108,11 +108,12 @@ module ProjectGroup
 
     def release
       gemspec = lambda do |proj|
-        `cd #{proj.base_path} && rake gemspec`
+        puts `cd #{proj.base_path} && rake gemspec`
       end
       one = lambda do
         singles.each { |x| gemspec[x] }
         singles.select { |proj| proj.repo.changes? || !proj.repo.pushed? }.each do |proj|
+          gemspec[proj]
           ec "gittower #{proj.path}"
           puts "Enter to Continue"
           STDIN.gets
