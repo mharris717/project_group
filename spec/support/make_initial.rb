@@ -1,4 +1,5 @@
 class MakeInitial
+  attr_accessor :current_name
   def tmp_dir
     File.expand_path(File.dirname(__FILE__) + "/../../tmp")
   end
@@ -26,19 +27,24 @@ class MakeInitial
     ec "git #{cmd}"
   end
 
-  def project(name,&b)
+  def make_remote
+    name = current_name
     Dir.chdir(origin_dir) do
       ec "mkdir #{name}.git"
       Dir.chdir("#{name}.git") do
         git "init --bare"
       end
     end
+  end
+
+  def project(name,ops={},&b)
+    self.current_name = name
     ec "mkdir #{name}"
     Dir.chdir(name) do
       ec "git init"
       ec "git config user.email johnsmith@fake.com"
       ec "git config user.name \"John Smith\""
-      git "remote add origin file://#{tmp_dir}/origin/#{name}.git"
+      git "remote add origin file://#{tmp_dir}/origin/#{name}.git" 
       yield
     end
   end
@@ -51,17 +57,6 @@ class MakeInitial
     File.create file,body
     git "add #{file}"
     git "commit -m #{file}"
-  end
-
-  def innerx
-    project "foo" do
-      create "a.txt"
-    end
-
-    project "bar" do
-      create "a.txt"
-      File.create "b.txt","zzz"
-    end
   end
 
   def make(&b)
@@ -137,31 +132,4 @@ shared_context "project" do
     ProjectGroup::Group.new(:singles => singles, :name => "abc")
   end
 
-end
-
-def make_initial_old
-  dir = File.expand_path(File.dirname(__FILE__) + "/../tmp")
-  
-
-  Dir.chdir(dir) do
-    `rm -rf projects` if FileTest.exists?("projects")
-    `mkdir projects`
-    Dir.chdir("projects") do
-      `mkdir foo`
-      Dir.chdir('foo') do
-        `git init`
-        File.create "a.txt","abc"
-        `git add a.txt`
-        `git commit -m a.txt`
-      end
-      `mkdir bar`
-      Dir.chdir('bar') do
-        `git init`
-        File.create "a.txt","abc"
-        `git add a.txt`
-        `git commit -m a.txt`
-        `echo z > b.txt`
-      end
-    end
-  end
 end

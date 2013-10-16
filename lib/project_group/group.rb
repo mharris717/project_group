@@ -12,5 +12,13 @@ module ProjectGroup
     def needs_push?
       singles.any? { |x| x.needs_push? }
     end
+
+    def to_s
+      res = []
+      res << "Group: #{name}"
+      res << "Singles (#{singles.size}): "
+      singles.each { |x| res << x.to_s }
+      res.join("\n")
+    end
   end
 end

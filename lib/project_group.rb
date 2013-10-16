@@ -16,9 +16,14 @@ end
 module ProjectGroup
   class << self
     def load!
-      %w(single repo group command config sublime_project run_tests).each do |f|
+      %w(single repo group command config sublime_project run_tests plugin).each do |f|
         load File.dirname(__FILE__) + "/project_group/#{f}.rb"
       end
+    end
+
+    def register(name,obj=nil,&b)
+      obj ||= b
+      Plugins.instance.add(name,obj)
     end
   end
 end

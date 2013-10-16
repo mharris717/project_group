@@ -23,5 +23,9 @@ module ProjectGroup
     def spec_output
       `cd #{path} && bundle exec rake spec`
     end
+
+    def to_s
+      "#{name} (#{type}): #{path}"
+    end
   end
 end

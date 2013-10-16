@@ -1,31 +1,19 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
-shared_context "config" do
-  let(:configs) do
-    ProjectGroup::Configs.instance
+class Object
+  def safe
+    Safe.new(:base => self)
   end
-  let(:local_config_body) { "" }
-  let(:config_body) { "" }
-  before(:all) do
-    MakeInitial.make
-    File.create("#{MakeInitial.tmp_dir}/configs/ezq.rb", config_body)
-    File.create("#{MakeInitial.tmp_dir}/tmp1/.project_group.rb", local_config_body) 
+end
 
-    Dir.chdir("#{MakeInitial.tmp_dir}/tmp1") do
-      c = ProjectGroup::Configs.instance!
-      c.dir = "#{MakeInitial.tmp_dir}/configs"
-      c.load!
-    end
-  end
+class Safe
+  include FromHash
+  attr_accessor :base
 
-  let(:group_config) do
-    configs.group_configs.first
-  end
-  let(:group) do
-    configs.groups.first
-  end
-  let(:project) do
-    configs.projects.first
+  def method_missing(sym,*args,&b)
+    res = base.send(sym,*args,&b)
+    raise "nil return for #{sym} #{args.inspect}" unless res
+    res
   end
 end
 
@@ -138,7 +126,7 @@ describe "ProjectGroup::Config" do
 
     it 'dir' do
       dir = "#{MakeInitial.tmp_dir}/projects/foo"
-      ProjectGroup::Configs.loaded.group_for_dir(dir).name.should == 'ezq'
+      ProjectGroup::Configs.loaded.safe.group_for_dir(dir).name.should == 'ezq'
     end
 
     it 'bar' do

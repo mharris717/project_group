@@ -114,6 +114,15 @@ module ProjectGroup
       res
     end
 
+    def to_s
+      res = []
+      res << "Configs: "
+      groups.each do |g|
+        res << g.to_s
+      end
+      res.join("\n")
+    end
+
     class << self
       fattr(:instance) { new }
       fattr(:loaded) do

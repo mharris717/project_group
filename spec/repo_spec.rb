@@ -3,15 +3,10 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 
 describe "Repo" do
-  it "smoke" do
-    2.should == 2
-  end
-
   describe "basic" do
     include_context "project"
     project do
       create "a.txt"
-      push
     end
 
     it 'changed files' do
@@ -34,6 +29,7 @@ describe "Repo" do
   describe "pushed" do
     include_context "project"
     project do
+      make_remote
       create "a.txt"
       push
     end
@@ -46,6 +42,7 @@ describe "Repo" do
   describe "not pushed" do
     include_context "project"
     project do
+      make_remote
       create "a.txt"
       push
       create "b.txt"
@@ -59,6 +56,7 @@ describe "Repo" do
   describe "not pushed - no origin/master" do
     include_context "project"
     project do
+      make_remote
       create "a.txt"
     end
 

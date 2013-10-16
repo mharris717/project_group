@@ -1,7 +1,11 @@
 module ProjectGroup
+  class SinglesFinder
+    include FromHash
+    attr_accessor :group_name, :project_name
+  end
   class Command
     include FromHash
-    attr_accessor :cmd, :group_name, :project_name
+    attr_accessor :cmd, :group_name, :project_name, :remaining_args, :use_group
 
     fattr(:configs) do
       Configs.loaded
@@ -14,32 +18,51 @@ module ProjectGroup
     fattr(:group) do
       if group_name
         configs.groups.find { |x| x.name == group_name }
-      elsif Configs.loaded.local_group
+      elsif configs.local_group
         configs.local_group
-      elsif Configs.loaded.group_for_dir(dir)
-        configs.group_for_dir(dir)
-      end.tap { |x| raise "no group #{group_name}" unless x }
+      elsif configs.group_for_dir(dir)
+        if use_group
+          configs.group_for_dir(dir)
+        else
+          s = configs.single_for_dir(dir)
+          OpenStruct.new(:singles => [s])
+        end
+      end.tap do |res| 
+        if !res
+          str = ["No Group found for #{dir}",configs.to_s].join("\n")
+          raise str
+        end
+      end
+    end
+
+    def singles_for_project_name
+      res = configs.all_singles.select { |x| x.name == project_name }
+      g = configs.group_for_dir(dir)
+      if g
+        res += g.singles.select { |x| x.short_name == project_name }
+      end
+      res.uniq
     end
 
     def singles
       if project_name
-        res = configs.all_singles.select { |x| x.name == project_name }
-        groupx = configs.group_for_dir(dir)
-        if groupx
-          res += groupx.singles.select { |x| x.short_name == project_name }
-        end
-        res.uniq
+        singles_for_project_name
       else
         group.singles
       end
     end
 
     def run!
-      send(cmd)
+      configs
+      if Plugins.instance.has?(cmd)
+        Plugins.instance.run(cmd, singles, :remaining_args => remaining_args)
+      else
+        send(cmd)
+      end
     end
 
     def cycle
-      group.singles.each do |proj|
+      singles.each do |proj|
         puts "#{proj.path} #{proj.status.inspect} #{proj.spec_output}"
       end 
     end
@@ -58,7 +81,7 @@ module ProjectGroup
     end
 
     def push
-      group.singles.each do |proj|
+      singles.each do |proj|
         if !proj.repo.pushed?
           ec "cd #{proj.path} && git push origin master:master"
         end
@@ -70,7 +93,7 @@ module ProjectGroup
     end
 
     def git
-      group.singles.each do |proj|
+      singles.each do |proj|
         if proj.repo.changes?
           ec "gittower #{proj.path}"
           puts "Enter to Continue"
@@ -80,7 +103,7 @@ module ProjectGroup
     end
 
     def list
-      Configs.loaded.groups.each do |g|
+      configs.groups.each do |g|
         puts g.name
       end
     end
@@ -88,7 +111,7 @@ module ProjectGroup
     def parse!(args)
       self.cmd = args.first
       OptionParser.new do |opts|
-        opts.banner = "Usage: example.rb [options]"
+        opts.banner = "Usage: example.rb [options] <file>"
 
         opts.on("-n", "--name name", "Group Name") do |v|
           self.group_name = v
@@ -97,7 +120,12 @@ module ProjectGroup
         opts.on("-p", "--projectname name", "Project Name") do |v|
           self.project_name = v
         end
+
+        opts.on("-g", "--group", "Use Group") do |v|
+          self.use_group = v
+        end
       end.parse!(args)
+      self.remaining_args = args[1..-1]
     end
   end
 end

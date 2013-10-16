@@ -91,4 +91,66 @@ describe "Command" do
     end
   end
 
+  describe "only gives one single when in project dir" do
+    include_context "project"
+    let(:should_setup_file_system) { false }
+
+    project "foo" do
+      create "a.txt"
+      push
+    end
+
+    project "bar" do
+      create "a.txt"
+      File.create "b.txt","zzz"
+    end
+
+    let(:command) do
+      res = ProjectGroup::Command.new
+      res.configs = ProjectGroup::Configs.new(:groups => [group])
+      res.dir = singles.first.path
+      res.parse! full_command.split(" ")
+      res
+    end
+
+    let(:full_command) do
+      "cycle"
+    end
+
+    it 'singles' do
+      command.singles.map { |x| x.short_name }.should == ['foo']
+    end
+  end
+
+  describe "group flag" do
+    include_context "project"
+    let(:should_setup_file_system) { false }
+
+    project "foo" do
+      create "a.txt"
+      push
+    end
+
+    project "bar" do
+      create "a.txt"
+      File.create "b.txt","zzz"
+    end
+
+    let(:command) do
+      res = ProjectGroup::Command.new
+      res.configs = ProjectGroup::Configs.new(:groups => [group])
+      res.dir = singles.first.path
+      res.parse! full_command.split(" ")
+      res
+    end
+
+    let(:full_command) do
+      "cycle -g"
+    end
+
+    it 'singles' do
+      command.singles.map { |x| x.short_name }.should == ['foo','bar']
+    end
+  end
+
 end
