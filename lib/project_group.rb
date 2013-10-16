@@ -21,7 +21,7 @@ module ProjectGroup
       end
     end
 
-    def register(name,obj=nil,&b)
+    def register_plugin(name,obj=nil,&b)
       obj ||= b
       Plugins.instance.add(name,obj)
     end
