@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Harris"]
-  s.date = "2013-10-15"
+  s.date = "2013-10-16"
   s.description = "project_group"
   s.email = "mharris717@gmail.com"
   s.executables = ["proj"]
@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
     "lib/project_group/command.rb",
     "lib/project_group/config.rb",
     "lib/project_group/group.rb",
+    "lib/project_group/plugin.rb",
     "lib/project_group/repo.rb",
     "lib/project_group/run_tests.rb",
     "lib/project_group/single.rb",
@@ -40,11 +41,13 @@ Gem::Specification.new do |s|
     "spec/command_spec.rb",
     "spec/config_spec.rb",
     "spec/group_spec.rb",
+    "spec/plugin_spec.rb",
     "spec/project_group_spec.rb",
     "spec/repo_spec.rb",
     "spec/run_tests_spec.rb",
     "spec/spec_helper.rb",
     "spec/sublime_project_spec.rb",
+    "spec/support/config.rb",
     "spec/support/ec.rb",
     "spec/support/make_initial.rb"
   ]
