@@ -93,13 +93,19 @@ module ProjectGroup
     end
 
     def git
-      singles.each do |proj|
-        if proj.repo.changes?
+      one = lambda do
+        singles.select { |proj| proj.repo.changes? || !proj.repo.pushed? }.each do |proj|
           ec "gittower #{proj.path}"
           puts "Enter to Continue"
           STDIN.gets
         end
       end
+
+      while one[].size > 0
+        a = 4
+      end
+
+
     end
 
     def list
