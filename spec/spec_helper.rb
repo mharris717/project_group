@@ -12,7 +12,7 @@ Spork.prefork do
   Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
   RSpec.configure do |config|
-    config.fail_fast = false
+    config.fail_fast = true
   end
 end
 

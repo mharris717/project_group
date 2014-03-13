@@ -4,7 +4,7 @@ shared_context "config" do
   end
   let(:local_config_body) { "" }
   let(:config_body) { "" }
-  before(:all) do
+  def setup_configs
     MakeInitial.make
     File.create("#{MakeInitial.tmp_dir}/configs/ezq.rb", config_body)
     File.create("#{MakeInitial.tmp_dir}/tmp1/.project_group.rb", local_config_body) 
@@ -15,6 +15,9 @@ shared_context "config" do
       c.load!
       ProjectGroup::Configs.loaded = c
     end
+  end
+  before do
+    setup_configs
   end
 
   let(:group_config) do

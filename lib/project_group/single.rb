@@ -7,6 +7,17 @@ module ProjectGroup
     fattr(:name) do
       File.basename(path)
     end
+    def eci(cmd,ops={})
+      cmd = "cd #{path} && #{cmd}"
+      ec cmd,ops
+    end
+    def relative_files  
+      Dir["#{path}/**/*.*"].map do |full|
+        res = full.gsub("#{path}/","")
+        raise "bad #{res}" if res == full
+        res
+      end
+    end
     def repo
       Repo.new(:path => path)
     end

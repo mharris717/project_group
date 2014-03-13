@@ -1,7 +1,7 @@
 module ProjectGroup
   class Plugin
     include FromHash
-    attr_accessor :name, :block
+    attr_accessor :name, :block, :options
 
     def call(proj,ops)
       block.call(proj,ops)
@@ -14,8 +14,8 @@ module ProjectGroup
     end
 
     fattr(:list) { [] }
-    def add(name,b)
-      self.list << Plugin.new(:name => name, :block => b)
+    def add(name,b,ops={})
+      self.list << Plugin.new(:name => name, :block => b, :options => ops)
     end
 
     def get(cmd)
@@ -27,6 +27,14 @@ module ProjectGroup
     def run(cmd,singles,ops={})
       singles.each do |s|
         get(cmd).call(s,ops)
+      end
+    end
+    def option(cmd,op)
+      res = get(cmd)
+      if res
+        res.options[op]
+      else
+        nil
       end
     end
   end

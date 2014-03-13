@@ -21,11 +21,25 @@ module ProjectGroup
       end
     end
 
-    def register_plugin(name,obj=nil,&b)
-      obj ||= b
-      Plugins.instance.add(name,obj)
+    def register_plugin(name,ops={},&b)
+      obj = if ops.kind_of?(Hash)
+        ops[:obj] || b
+      elsif !ops
+        raise 'bad'
+      else
+        ops
+      end
+
+      ops.delete(:obj)
+
+      Plugins.instance.add(name,obj,ops)
     end
   end
 end
 
 ProjectGroup.load!
+
+ProjectGroup.register_plugin("reach2", use_group: true) do |proj,ops|
+  cmd = ops[:remaining_args].join(" ")
+  proj.eci cmd
+end

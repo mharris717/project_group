@@ -1,8 +1,4 @@
 module ProjectGroup
-  class SinglesFinder
-    include FromHash
-    attr_accessor :group_name, :project_name
-  end
   class Command
     include FromHash
     attr_accessor :cmd, :group_name, :project_name, :remaining_args, :use_group
@@ -16,10 +12,15 @@ module ProjectGroup
     end
 
     fattr(:group) do
+      # explicit group name given: use entire group
       if group_name
         configs.groups.find { |x| x.name == group_name }
+
+      # we have a local config file
       elsif configs.local_group
         configs.local_group
+
+      # working dir is part of a group
       elsif configs.group_for_dir(dir)
         if use_group
           configs.group_for_dir(dir)
@@ -36,10 +37,11 @@ module ProjectGroup
     end
 
     def singles_for_project_name
-      res = configs.all_singles.select { |x| x.name == project_name }
+      names = project_name.split(",")
+      res = configs.all_singles.select { |x| names.include?(x.name) }
       g = configs.group_for_dir(dir)
       if g
-        res += g.singles.select { |x| x.short_name == project_name }
+        res += g.singles.select { |x| names.include?(x.short_name) }
       end
       res.uniq
     end
@@ -55,6 +57,7 @@ module ProjectGroup
     def run!
       configs
       if Plugins.instance.has?(cmd)
+        self.use_group = true if Plugins.instance.option(cmd,:use_group)
         Plugins.instance.run(cmd, singles, :remaining_args => remaining_args)
       else
         send(cmd)
@@ -95,7 +98,8 @@ module ProjectGroup
     def git
       one = lambda do
         singles.select { |proj| proj.repo.changes? || !proj.repo.pushed? }.each do |proj|
-          ec "gittower #{proj.path}"
+          puts proj.repo.needs_desc
+          ec "gittower -s #{proj.path}"
           puts "Enter to Continue"
           STDIN.gets
         end
@@ -103,6 +107,94 @@ module ProjectGroup
 
       while one[].size > 0
         a = 4
+      end
+    end
+
+    def git_full_single(proj)
+      ec "cd #{proj.path} && bundle install && bundle exec rake gemspec"
+      if proj.repo.changes? || !proj.repo.pushed?
+        if proj.repo.changes?
+          ec "gittower -s #{proj.path}"
+          puts "Enter to Continue"
+          STDIN.gets
+        end
+
+        ec "cd #{proj.path} && bundle exec rake gemspec"
+        if proj.repo.changes? && proj.repo.only_dep_changes?
+          #puts proj.repo.changed_files.inspect
+          proj.repo.commit_dep_files!
+        end
+
+        if !proj.repo.pushed?
+          ec "cd #{proj.path} && git push origin master:master"
+        end
+      end
+    end
+
+    def git_full
+      singles.each do |proj|
+        git_full_single proj
+      end
+    end
+
+    def bump_version
+      singles.each do |proj|
+        v = ec("cd #{proj.path} && bundle exec rake version").split(" ").last
+        if v != '0.3.0'
+          cmds = []
+          cmds << lambda { git_full_single(proj) }
+          cmds << "bundle exec rake version:write MAJOR=0 MINOR=3 PATCH=0"
+          cmds << "bundle exec rake gemspec"
+          cmds << "git add *.gemspec"
+          cmds << lambda do
+            if proj.repo.changes?
+              ec "cd #{proj.path} && git commit --amend -m 'Version bump to 0.3.0'"
+            end
+          end
+          cmds << "git push origin master:master"
+          cmds << "bundle exec rake git:release"
+
+          cmds.each do |cmd|
+            if cmd.kind_of?(String)
+              ec "cd #{proj.path} && #{cmd}"
+            else
+              cmd.call
+            end
+          end
+        else
+          git_full_single(proj)
+        end
+      end
+    end
+
+    def update_private_gem(path)
+      file = "#{path}/Gemfile"
+      body = File.read(file)
+
+      fresh = '#### SPECIAL GEMFILE BLOCK START
+def private_gem(name)
+  gem name, \'0.3.0\', git: "https://#{ENV[\'GITHUB_TOKEN\']}:x-oauth-basic@github.com/mharris717/#{name}.git", branch: :master
+end
+#### SPECIAL GEMFILE BLOCK END'
+
+      body = body.gsub(/#### SPECIAL GEMFILE BLOCK START.*#### SPECIAL GEMFILE BLOCK END/m,fresh)
+      File.create file, body
+    end
+
+    def pgem
+      singles.each do |proj|
+        update_private_gem(proj.path)
+      end
+    end
+
+    def gem_stuff
+      singles.select { |proj| proj.repo.changes? || !proj.repo.pushed? }.each do |proj|
+        if proj.repo.changes?
+          ec "cd #{proj.path} && git add Gemfile Gemfile.lock *.gemspec && git commit -m 'Gem Deps and gemspec'"
+        end
+        if !proj.repo.pushed?
+          ec "cd #{proj.path} && git push origin master:master"
+        end
       end
     end
 
@@ -138,8 +230,15 @@ module ProjectGroup
       end
     end
 
+    def reach
+      each_cmd = remaining_args.join(" ")
+      singles.each do |proj|
+        ec "cd #{proj.path} && #{each_cmd}"
+      end
+    end
+
+
     def parse!(args)
-      self.cmd = args.first
       OptionParser.new do |opts|
         opts.banner = "Usage: example.rb [options] <file>"
 
@@ -155,6 +254,7 @@ module ProjectGroup
           self.use_group = v
         end
       end.parse!(args)
+      self.cmd = args.first
       self.remaining_args = args[1..-1]
     end
   end

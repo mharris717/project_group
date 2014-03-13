@@ -39,16 +39,23 @@ module ProjectGroup
     end
 
     def use_file?(f)
-      return false if %w(build tmp log pkg vendor junk doc).any? { |x| x == f.split("/").first }
+      return false if %w(build tmp log pkg vendor junk doc coverage).any? { |x| x == f.split("/").first }
       return false if f =~ /public\/assets/
       return false if f.split(".").last == "log"
       return false if f =~ /testflight_launcher/
       true
     end
 
+    def shell_changes?
+      res = ec "cd #{path} && git status"
+      res = (res =~ /nothing to commit, working directory clean/i)
+      !res
+    end
+
     fattr(:changed_files) do
       res = {:modified => [], :added => [], :untracked => []}
       s = repo.status
+      #puts s.changed.inspect
 
       s.changed.each do |path,file|
         res[:modified] << path if use_file?(path)
@@ -66,7 +73,24 @@ module ProjectGroup
     end
 
     def changes?
-      changed_files.values.any? { |x| x.size > 0 }
+      res = changed_files.values.any? { |x| x.size > 0 }
+      res && shell_changes?
+    end
+
+    def only_dep_changes?
+      return false unless changes?
+      files = changed_files.values.flatten.uniq
+      files.all? do |file|
+        file =~ /(gemfile|gemspec)/i 
+      end
+    end 
+
+    def commit_dep_files!
+      ec "cd #{path} && git add Gemfile Gemfile.lock *.gemspec && git commit -m 'Dep Files'"
+    end
+
+    def ensure_dep_files!
+      commit_dep_files! if changes? && only_dep_changes?
     end
 
     fattr(:remote_ref) do
@@ -90,6 +114,10 @@ module ProjectGroup
 
     def current?
       !changes? && pushed?
+    end
+
+    def needs_desc
+      "Remote #{remote_ref} Local #{local_ref} Changes #{changed_files.inspect}"
     end
 
     def push_check!
