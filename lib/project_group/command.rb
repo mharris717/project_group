@@ -1,3 +1,13 @@
+class File
+  class << self
+    def gsub!(file,*args)
+      body = read(file)
+      body = body.gsub(*args)
+      File.create file, body
+    end
+  end
+end
+
 module ProjectGroup
   class Command
     include FromHash
@@ -97,6 +107,12 @@ module ProjectGroup
 
     def git
       one = lambda do
+        singles.each do |proj|
+          if !proj.repo.pushed?
+            ec "cd #{proj.path} && git push origin master:master"
+          end
+        end
+
         singles.select { |proj| proj.repo.changes? || !proj.repo.pushed? }.each do |proj|
           puts proj.repo.needs_desc
           ec "gittower -s #{proj.path}"
@@ -110,9 +126,20 @@ module ProjectGroup
       end
     end
 
+    def fix_gemspec(proj)
+      file = "#{proj.path}/#{proj.short_name}.gemspec"
+      File.gsub! file, "2014-03-15","2014-03-11"
+    end
+
     def git_full_single(proj)
       ec "cd #{proj.path} && bundle install && bundle exec rake gemspec"
+      fix_gemspec(proj)
       if proj.repo.changes? || !proj.repo.pushed?
+        if proj.repo.changes? && proj.repo.only_dep_changes?
+          #puts proj.repo.changed_files.inspect
+          proj.repo.commit_dep_files!
+        end
+        
         if proj.repo.changes?
           ec "gittower -s #{proj.path}"
           puts "Enter to Continue"
@@ -120,6 +147,7 @@ module ProjectGroup
         end
 
         ec "cd #{proj.path} && bundle exec rake gemspec"
+        fix_gemspec(proj)
         if proj.repo.changes? && proj.repo.only_dep_changes?
           #puts proj.repo.changed_files.inspect
           proj.repo.commit_dep_files!
@@ -222,6 +250,10 @@ end
       while one[].size > 0
         a = 4
       end
+    end
+
+    def symdir
+      SymDir.new(group: group).create!
     end
 
     def list

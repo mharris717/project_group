@@ -20,4 +20,21 @@ module ProjectGroup
       File.create path, to_json
     end
   end
+
+  class SymDir
+    include FromHash
+    attr_accessor :group
+
+    fattr(:target) do
+      "/users/mharris717/.project_group_syms/#{group.name}"
+    end
+
+    def create!
+      FileUtils.mkdir_p target
+      group.singles.each do |proj|
+        ec "ln -s #{proj.path} #{target}/#{proj.short_name}"
+      end
+    end
+
+  end
 end

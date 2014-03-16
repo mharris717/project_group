@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Harris"]
-  s.date = "2013-10-16"
+  s.date = "2014-03-13"
   s.description = "project_group"
   s.email = "mharris717@gmail.com"
   s.executables = ["proj"]
@@ -64,6 +64,8 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<mharris_ext>, [">= 0"])
       s.add_runtime_dependency(%q<andand>, [">= 0"])
       s.add_runtime_dependency(%q<grit>, [">= 0"])
+      s.add_runtime_dependency(%q<mongoid_gem_config>, [">= 0"])
+      s.add_runtime_dependency(%q<remote_cache>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, [">= 1.0"])
@@ -78,6 +80,8 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<mharris_ext>, [">= 0"])
       s.add_dependency(%q<andand>, [">= 0"])
       s.add_dependency(%q<grit>, [">= 0"])
+      s.add_dependency(%q<mongoid_gem_config>, [">= 0"])
+      s.add_dependency(%q<remote_cache>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, [">= 1.0"])
@@ -93,6 +97,8 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<mharris_ext>, [">= 0"])
     s.add_dependency(%q<andand>, [">= 0"])
     s.add_dependency(%q<grit>, [">= 0"])
+    s.add_dependency(%q<mongoid_gem_config>, [">= 0"])
+    s.add_dependency(%q<remote_cache>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.8.0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, [">= 1.0"])
