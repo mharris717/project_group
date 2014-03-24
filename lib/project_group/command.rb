@@ -201,8 +201,12 @@ module ProjectGroup
 
       fresh = '#### SPECIAL GEMFILE BLOCK START
 def private_gem(name)
-  gem name, \'0.3.0\', git: "https://#{ENV[\'GITHUB_TOKEN\']}:x-oauth-basic@github.com/mharris717/#{name}.git", branch: :master
+  gem name, git: "https://#{ENV[\'GITHUB_TOKEN\']}:x-oauth-basic@github.com/mharris717/#{name}.git", branch: :master
 end
+#### SPECIAL GEMFILE BLOCK END'
+
+      fresh = '#### SPECIAL GEMFILE BLOCK START
+load "/code/orig/private_gem/private_gem.rb"
 #### SPECIAL GEMFILE BLOCK END'
 
       body = body.gsub(/#### SPECIAL GEMFILE BLOCK START.*#### SPECIAL GEMFILE BLOCK END/m,fresh)
