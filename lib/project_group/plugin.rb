@@ -6,6 +6,10 @@ module ProjectGroup
     def call(proj,ops)
       block.call(proj,ops)
     end
+
+    def group_level?
+      (options || {})[:level] == :group
+    end
   end
 
   class Plugins
@@ -25,8 +29,13 @@ module ProjectGroup
       !!get(cmd)
     end
     def run(cmd,singles,ops={})
-      singles.each do |s|
-        get(cmd).call(s,ops)
+      plugin = get(cmd)
+      if plugin.group_level?
+        plugin.call ops[:group],ops
+      else
+        singles.each do |s|
+          plugin.call(s,ops)
+        end
       end
     end
     def option(cmd,op)

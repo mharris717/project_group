@@ -129,5 +129,16 @@ module ProjectGroup
         git "push origin master"
       end
     end
+
+    def only_gemspec_date_change?
+      c = changed_files
+      return false unless c[:added].empty? || c[:untracked].empty?
+      return false unless c[:modified].size == 1 && c[:modified].first =~ /\.gemspec/
+
+      lines = ec("cd #{path} && git diff", silent: true).split("\n")
+      lines = lines.select { |line| line =~ /^[\+\-] / }
+      return false unless lines.size == 2 && lines.select { |x| x[0..0] == '+' }.size == 1
+      lines.all? { |line| line =~ /s\.date/ }
+    end
   end
 end

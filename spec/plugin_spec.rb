@@ -16,9 +16,11 @@ shared_context "plugin" do
   def setup_plugin
     ProjectGroup::Plugins.instance!
     ProjectGroup.register_plugin(:thing,plugin_ops) do |p|
-      $thing_names << p.short_name
+      $things << p
+      $thing_names << p.short_name if p.respond_to?(:short_name)
     end
     $thing_names = []
+    $things = []
   end
   let(:command) do
     res = ProjectGroup::Command.new(:configs => configs, :dir => working_dir)
@@ -100,6 +102,24 @@ describe "Plugin" do
       it 'run' do
         command.run!
         $thing_names.should == ['ezq','ezq2']
+      end
+    end
+
+    describe "plugin that acts only once on the group" do
+      let(:plugin_ops) do
+        {level: :group}
+      end
+      before do
+        command.dir = "/code/orig/ezq"
+      end
+      let(:full_command) do
+        "thing"
+      end
+
+      it 'run' do
+        command.run!
+        $things.size.should == 1
+        $things.first.should be_kind_of(ProjectGroup::Group)
       end
     end
 

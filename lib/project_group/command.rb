@@ -67,8 +67,8 @@ module ProjectGroup
     def run!
       configs
       if Plugins.instance.has?(cmd)
-        self.use_group = true if Plugins.instance.option(cmd,:use_group)
-        Plugins.instance.run(cmd, singles, :remaining_args => remaining_args)
+        self.use_group = true if Plugins.instance.option(cmd,:use_group) || Plugins.instance.option(cmd,:level) == :group
+        Plugins.instance.run(cmd, singles, :remaining_args => remaining_args, :group => group)
       else
         send(cmd)
       end
@@ -87,12 +87,6 @@ module ProjectGroup
       end
     end
 
-    def open
-      proj = SublimeProject.new(:group => group)
-      proj.write!
-      ec "subl --project #{proj.path}"
-    end
-
     def push
       singles.each do |proj|
         if !proj.repo.pushed?
@@ -105,65 +99,7 @@ module ProjectGroup
       ec "subl ~/.project_group"
     end
 
-    def git
-      one = lambda do
-        singles.each do |proj|
-          if !proj.repo.pushed?
-            ec "cd #{proj.path} && git push origin master:master"
-          end
-        end
-
-        singles.select { |proj| proj.repo.changes? || !proj.repo.pushed? }.each do |proj|
-          puts proj.repo.needs_desc
-          ec "gittower -s #{proj.path}"
-          puts "Enter to Continue"
-          STDIN.gets
-        end
-      end
-
-      while one[].size > 0
-        a = 4
-      end
-    end
-
-    def fix_gemspec(proj)
-      file = "#{proj.path}/#{proj.short_name}.gemspec"
-      File.gsub! file, "2014-03-15","2014-03-11"
-    end
-
-    def git_full_single(proj)
-      ec "cd #{proj.path} && bundle install && bundle exec rake gemspec"
-      fix_gemspec(proj)
-      if proj.repo.changes? || !proj.repo.pushed?
-        if proj.repo.changes? && proj.repo.only_dep_changes?
-          #puts proj.repo.changed_files.inspect
-          proj.repo.commit_dep_files!
-        end
-        
-        if proj.repo.changes?
-          ec "gittower -s #{proj.path}"
-          puts "Enter to Continue"
-          STDIN.gets
-        end
-
-        ec "cd #{proj.path} && bundle exec rake gemspec"
-        fix_gemspec(proj)
-        if proj.repo.changes? && proj.repo.only_dep_changes?
-          #puts proj.repo.changed_files.inspect
-          proj.repo.commit_dep_files!
-        end
-
-        if !proj.repo.pushed?
-          ec "cd #{proj.path} && git push origin master:master"
-        end
-      end
-    end
-
-    def git_full
-      singles.each do |proj|
-        git_full_single proj
-      end
-    end
+    
 
     def bump_version
       singles.each do |proj|
@@ -206,7 +142,13 @@ end
 #### SPECIAL GEMFILE BLOCK END'
 
       fresh = '#### SPECIAL GEMFILE BLOCK START
-load "/code/orig/private_gem/private_gem.rb"
+if FileTest.exist?("/code/orig/private_gem/private_gem.rb")
+  load "/code/orig/private_gem/private_gem.rb"
+else
+  def private_gem(name)
+    gem name, git: "https://#{ENV[\'GITHUB_TOKEN\']}:x-oauth-basic@github.com/mharris717/#{name}.git", branch: :master
+  end
+end
 #### SPECIAL GEMFILE BLOCK END'
 
       body = body.gsub(/#### SPECIAL GEMFILE BLOCK START.*#### SPECIAL GEMFILE BLOCK END/m,fresh)

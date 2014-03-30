@@ -16,8 +16,12 @@ end
 module ProjectGroup
   class << self
     def load!
-      %w(single repo group command config sublime_project run_tests plugin).each do |f|
+      %w(plugin single repo group command config sublime_project run_tests git_tasks).each do |f|
         load File.dirname(__FILE__) + "/project_group/#{f}.rb"
+      end
+
+      %w(string_ext).each do |f|
+        load File.dirname(__FILE__) + "/project_group/ext/#{f}.rb"
       end
     end
 
@@ -37,22 +41,33 @@ module ProjectGroup
   end
 end
 
-ProjectGroup.load!
-
-#require 'remote_cache'
-#load "/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb"
-#load "/code/orig/remote_cache/lib/remote_cache.rb"
-ProjectGroup.register_plugin("reach2", use_group: true) do |proj,ops|
-  cmd = ops[:remaining_args].join(" ")
-  #RC.cmd "cd #{proj.path} && #{cmd}"
-  proj.eci cmd
+def do_until_success(&b)
+  loop do
+    begin
+      res = b[]
+      return res
+    rescue => exp
+      puts exp.message
+      puts "Enter to Continue:"
+      STDIN.gets
+    end
+  end
 end
 
-class Fun
-  def abcxyz
-    42
+ProjectGroup.load!
+
+ProjectGroup.register_plugin("reach", use_group: true) do |proj,ops|
+  cmd = ops[:remaining_args].join(" ")
+  #RC.cmd "cd #{proj.path} && #{cmd}"
+  do_until_success do
+    proj.eci cmd
   end
-  fattr(:xyzabc) do
-    42
+end
+
+ProjectGroup.register_plugin("gt", use_group: true) do |proj,ops|
+  if proj.repo.changes?
+    proj.eci "gittower -s"
+    puts "Enter to Continue:"
+    STDIN.gets
   end
 end

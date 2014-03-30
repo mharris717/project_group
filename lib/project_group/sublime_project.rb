@@ -3,7 +3,7 @@ module ProjectGroup
     include FromHash
     attr_accessor :group
     def as_json
-      folders = group.singles.map do |proj|
+      folders = group.singles.sort_by { |x| x.short_name }.map do |proj|
         {"path" => proj.path, "name" => proj.short_name, "folder_exclude_patterns" => ["tmp","junk",".bundle","dist","node_modules"]}
       end
       {"folders" => folders}
@@ -35,6 +35,12 @@ module ProjectGroup
         ec "ln -s #{proj.path} #{target}/#{proj.short_name}"
       end
     end
-
   end
+
+  register_plugin("open", level: :group) do |group|
+    proj = SublimeProject.new(:group => group)
+    proj.write!
+    ec "subl --project #{proj.path}"
+  end
+
 end
