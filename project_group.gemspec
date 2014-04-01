@@ -53,7 +53,9 @@ Gem::Specification.new do |s|
     "spec/sublime_project_spec.rb",
     "spec/support/config.rb",
     "spec/support/ec.rb",
-    "spec/support/make_initial.rb"
+    "spec/support/make_initial.rb",
+    "tags",
+    "tags.old"
   ]
   s.homepage = "http://github.com/mharris717/project_group"
   s.licenses = ["MIT"]
