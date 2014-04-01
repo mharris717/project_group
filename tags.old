@@ -1,0 +1,853 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
++	/code/orig/odds/lib/odds/odds.rb	/^    def +(other)$/;"	f	class:Odds
+<=>	/code/orig/baseball_projection/lib/baseball_projection/randomized_projection.rb	/^    def <=>(x)$/;"	f	class:BaseballProjection.RandomizedProjection
+==	/code/orig/odds/lib/odds/odds.rb	/^    def ==(x)$/;"	f	class:Odds
+Algorithms	/code/orig/odds/lib/odds/algorithms/correlated_kelly.rb	/^  module Algorithms$/;"	m	class:Odds
+Algorithms	/code/orig/odds/lib/odds/algorithms/kelly.rb	/^  module Algorithms$/;"	m	class:Odds
+Algorithms	/code/orig/odds/lib/odds/algorithms/parlay_utility.rb	/^  module Algorithms$/;"	m	class:Odds
+Array	/code/orig/baseball_projection/lib/baseball_projection.rb	/^class Array$/;"	c
+Array	/code/orig/bet_store/junk/deps.rb	/^class Array$/;"	c
+Array	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^class Array$/;"	c
+Array	/code/orig/odds/lib/odds/ext/map_special.rb	/^class Array$/;"	c
+Array	/code/orig/odds/lib/odds/ext/math.rb	/^class Array$/;"	c
+Array	/code/orig/odds/lib/odds/ext/rand.rb	/^class Array$/;"	c
+Base	/code/orig/baseball_lottery/lib/baseball_lottery/season_props.rb	/^    class Base$/;"	c	class:BaseballLottery.SeasonProp
+Base	/code/orig/bet_store/app/models/bet_store/question.rb	/^    class Base$/;"	c	class:BetStore.Question
+Base	/code/orig/bet_store/app/models/bet_store/side.rb	/^    class Base$/;"	c	class:BetStore.Side
+Base	/code/orig/bet_store/junk/app/models/bet_store/question.rb	/^    class Base$/;"	c	class:BetStore.Question
+Base	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^    class Base$/;"	c	class:BetStore.Side
+Base	/code/orig/bet_store/lib/bet_store/question.rb	/^    class Base$/;"	c	class:BetStore.Question
+Base	/code/orig/bet_store/lib/bet_store/side.rb	/^    class Base$/;"	c	class:BetStore.Side
+BaseFootballDay	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^  class BaseFootballDay < Day$/;"	c	class:EspnScores
+BaseFootballGame	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^  class BaseFootballGame < Game$/;"	c	class:EspnScores
+Baseball	/code/orig/baseball/lib/baseball.rb	/^module Baseball$/;"	m
+Baseball	/code/orig/baseball/lib/baseball/bases.rb	/^module Baseball$/;"	m
+Baseball	/code/orig/baseball/lib/baseball/game.rb	/^module Baseball$/;"	m
+Baseball	/code/orig/baseball/lib/baseball/lineup.rb	/^module Baseball$/;"	m
+Baseball	/code/orig/baseball/lib/baseball/player.rb	/^module Baseball$/;"	m
+Baseball	/code/orig/baseball/lib/baseball/stats.rb	/^module Baseball$/;"	m
+BaseballDay	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^  class BaseballDay < Day$/;"	c	class:EspnScores
+BaseballGame	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^  class BaseballGame < Game$/;"	c	class:EspnScores
+BaseballLottery	/code/orig/baseball_lottery/lib/baseball_lottery.rb	/^module BaseballLottery$/;"	m
+BaseballLottery	/code/orig/baseball_lottery/lib/baseball_lottery/season_props.rb	/^module BaseballLottery$/;"	m
+BaseballLottery	/code/orig/baseball_lottery/lib/baseball_lottery/sims.rb	/^module BaseballLottery$/;"	m
+BaseballLottery	/code/orig/baseball_lottery/lib/baseball_lottery/stat_bet.rb	/^module BaseballLottery$/;"	m
+BaseballLottery	/code/orig/baseball_lottery/lib/baseball_lottery/tasks.rb	/^module BaseballLottery$/;"	m
+BaseballProjection	/code/orig/baseball_projection/lib/baseball_projection.rb	/^module BaseballProjection$/;"	m
+BaseballProjection	/code/orig/baseball_projection/lib/baseball_projection/calced_stats_mod.rb	/^module BaseballProjection$/;"	m
+BaseballProjection	/code/orig/baseball_projection/lib/baseball_projection/composite_projection.rb	/^module BaseballProjection$/;"	m
+BaseballProjection	/code/orig/baseball_projection/lib/baseball_projection/pa_estimate.rb	/^module BaseballProjection$/;"	m
+BaseballProjection	/code/orig/baseball_projection/lib/baseball_projection/randomized_projection.rb	/^module BaseballProjection$/;"	m
+BaseballProjection	/code/orig/baseball_projection/lib/baseball_projection/samples.rb	/^module BaseballProjection$/;"	m
+BaseballProjection	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^module BaseballProjection$/;"	m
+BaseballProjection	/code/orig/baseball_projection/lib/baseball_projection/single_projection.rb	/^module BaseballProjection$/;"	m
+BaseballProjection	/code/orig/baseball_projection/lib/baseball_projection/stat.rb	/^module BaseballProjection$/;"	m
+BaseballProjection	/code/orig/baseball_projection/lib/baseball_projection/true_talent.rb	/^module BaseballProjection$/;"	m
+Bases	/code/orig/baseball/lib/baseball/bases.rb	/^  class Bases$/;"	c	class:Baseball
+BasketballDay	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^  class BasketballDay < Day$/;"	c	class:EspnScores
+BasketballGame	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^  class BasketballGame < Game$/;"	c	class:EspnScores
+Bet	/code/orig/baseball_lottery/lib/baseball_lottery.rb	/^  class Bet$/;"	c	class:Odds
+Bet	/code/orig/odds/lib/odds/bet.rb	/^  class Bet$/;"	c	class:Odds
+BetStore	/code/orig/bet_store/app/models/bet_store/game.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/app/models/bet_store/matched_sides.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/app/models/bet_store/question.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/app/models/bet_store/season.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/app/models/bet_store/side.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/app/models/bet_store/side_estimate.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/app/models/bet_store/source.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/app/models/bet_store/team.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/junk/app/models/bet_store/game.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/junk/app/models/bet_store/question.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/junk/app/models/bet_store/richer_field.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/junk/app/models/bet_store/side_estimate.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/junk/app/models/bet_store/source.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/lib/bet_store.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/lib/bet_store/engine.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/lib/bet_store/game.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/lib/bet_store/matched_sides.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/lib/bet_store/question.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/lib/bet_store/question_api.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/lib/bet_store/season.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/lib/bet_store/side.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/lib/bet_store/side_estimate.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/lib/bet_store/source.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/lib/bet_store/team.rb	/^module BetStore$/;"	m
+BetStore	/code/orig/bet_store/lib/bet_store/util.rb	/^module BetStore$/;"	m
+Calc	/code/orig/odds/lib/odds/algorithms/correlated_kelly.rb	/^      class Calc$/;"	c	class:Odds.Algorithms.CorrelatedKelly
+CalcedStatsMod	/code/orig/baseball_projection/lib/baseball_projection/calced_stats_mod.rb	/^  module CalcedStatsMod$/;"	m	class:BaseballProjection
+CaptureOut	/code/orig/sim_back/vol/fork_test.rb	/^class CaptureOut$/;"	c
+ClassMethods	/code/orig/bet_store/junk/app/models/bet_store/richer_field.rb	/^    module ClassMethods$/;"	m	class:BetStore.RicherField
+ClassMethods	/code/orig/game_store/app/models/game_store/game_mod.rb	/^    module ClassMethods$/;"	m	class:GameStore.GameMod
+ClassMethods	/code/orig/game_store/app/models/game_store/season_mod.rb	/^    module ClassMethods$/;"	m	class:GameStore.SeasonMod
+ClassMethods	/code/orig/game_store/lib/game_store/game_mod.rb	/^    module ClassMethods$/;"	m	class:GameStore.GameMod
+ClassMethods	/code/orig/game_store/lib/game_store/season_mod.rb	/^    module ClassMethods$/;"	m	class:GameStore.SeasonMod
+ClassMethods	/code/orig/mongoid_gem_config/lib/mongoid_gem_config/rich_field.rb	/^    module ClassMethods$/;"	m	class:MongoidGemConfig.RichField
+CollegeFootballDay	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^  class CollegeFootballDay < BaseFootballDay$/;"	c	class:EspnScores
+CollegeFootballGame	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^  class CollegeFootballGame < FootballGame$/;"	c	class:EspnScores
+CombinationParlay	/code/orig/odds/lib/odds/special/combination_parlay.rb	/^  class CombinationParlay$/;"	c	class:Odds
+CompositeMongoConfig	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^class CompositeMongoConfig$/;"	c
+CompositeProjection	/code/orig/baseball_projection/lib/baseball_projection/composite_projection.rb	/^  class CompositeProjection$/;"	c	class:BaseballProjection
+Conn	/code/orig/baseball_lottery/vol/nested_inc.rb	/^class Conn$/;"	c
+ConsolidateWorker	/code/orig/sim_back/lib/sim_back/consolidate_worker.rb	/^  class ConsolidateWorker$/;"	c	class:SimBack
+ConsolidateWorker	/code/orig/sim_back/spec/support_ext/basic_imp.rb	/^  class ConsolidateWorker$/;"	c
+Const	/code/orig/bet_store/app/models/bet_store/side.rb	/^    class Const < Base$/;"	c	class:BetStore.Side.Base
+Const	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^    class Const < Base$/;"	c	class:BetStore.Side.Base
+Const	/code/orig/bet_store/lib/bet_store/side.rb	/^    class Const < Base$/;"	c	class:BetStore.Side.Base
+CorrelatedKelly	/code/orig/odds/lib/odds/algorithms/correlated_kelly.rb	/^    module CorrelatedKelly$/;"	m	class:Odds.Algorithms
+Date	/code/orig/espn_scores/lib/espn_scores.rb	/^class Date$/;"	c
+DateParse	/code/orig/espn_scores/lib/espn_scores/date_parse.rb	/^  class DateParse$/;"	c	class:EspnScores
+Day	/code/orig/espn_scores/lib/espn_scores/day.rb	/^  class Day$/;"	c	class:EspnScores
+Engine	/code/orig/bet_store/lib/bet_store/engine.rb	/^  class Engine < Rails::Engine$/;"	c	class:BetStore
+Engine	/code/orig/game_store/lib/game_store/engine.rb	/^  class Engine < Rails::Engine$/;"	c	class:GameStore
+EnsuredWhere	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^  class EnsuredWhere$/;"	c	class:BaseballProjection
+EspnScores	/code/orig/espn_scores/lib/espn_scores.rb	/^module EspnScores$/;"	m
+EspnScores	/code/orig/espn_scores/lib/espn_scores/date_parse.rb	/^module EspnScores$/;"	m
+EspnScores	/code/orig/espn_scores/lib/espn_scores/day.rb	/^module EspnScores$/;"	m
+EspnScores	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^module EspnScores$/;"	m
+EspnScores	/code/orig/espn_scores/lib/espn_scores/game.rb	/^module EspnScores$/;"	m
+EspnScores	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^module EspnScores$/;"	m
+EspnScores	/code/orig/espn_scores/lib/espn_scores/sport.rb	/^module EspnScores$/;"	m
+EspnScores	/code/orig/espn_scores/lib/espn_scores/web.rb	/^module EspnScores$/;"	m
+EspnScores	/code/orig/espn_scores/lib/espn_scores/week.rb	/^module EspnScores$/;"	m
+Exact	/code/orig/bet_store/app/models/bet_store/question.rb	/^    class Exact < Base$/;"	c	class:BetStore.Question
+Exact	/code/orig/bet_store/junk/app/models/bet_store/question.rb	/^    class Exact < Base$/;"	c	class:BetStore.Question
+Exact	/code/orig/bet_store/lib/bet_store/question.rb	/^    class Exact < Base$/;"	c	class:BetStore.Question
+ExpectedProfit	/code/orig/odds/lib/odds/bet.rb	/^    module ExpectedProfit$/;"	m	class:Odds.Bet
+FakeRunner	/code/orig/sim_back/spec/support/fake_runner.rb	/^class FakeRunner$/;"	c
+Float	/code/orig/baseball_projection/lib/baseball_projection.rb	/^class Float$/;"	c
+FootballDay	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^  class FootballDay < BaseFootballDay$/;"	c	class:EspnScores
+FootballGame	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^  class FootballGame < BaseFootballGame$/;"	c	class:EspnScores
+Game	/code/orig/baseball/lib/baseball/game.rb	/^  class Game$/;"	c	class:Baseball
+Game	/code/orig/bet_store/app/models/bet_store/game.rb	/^  class Game$/;"	c	class:BetStore
+Game	/code/orig/bet_store/junk/app/models/bet_store/game.rb	/^  class Game$/;"	c	class:BetStore
+Game	/code/orig/bet_store/lib/bet_store/game.rb	/^  class Game$/;"	c	class:BetStore
+Game	/code/orig/espn_scores/lib/espn_scores/game.rb	/^  class Game$/;"	c	class:EspnScores
+Game	/code/orig/game_store/app/models/game_store/game.rb	/^  class Game$/;"	c	class:GameStore
+Game	/code/orig/game_store/lib/game_store/game.rb	/^  class Game$/;"	c	class:GameStore
+GameCreate	/code/orig/game_store/app/models/game_store/game_create.rb	/^  class GameCreate$/;"	c	class:GameStore
+GameCreate	/code/orig/game_store/lib/game_store/game_create.rb	/^  class GameCreate$/;"	c	class:GameStore
+GameDay	/code/orig/game_store/app/models/game_store/game_create.rb	/^  class GameDay$/;"	c	class:GameStore
+GameDay	/code/orig/game_store/lib/game_store/game_create.rb	/^  class GameDay$/;"	c	class:GameStore
+GameMod	/code/orig/game_store/app/models/game_store/game_mod.rb	/^  module GameMod$/;"	m	class:GameStore
+GameMod	/code/orig/game_store/lib/game_store/game_mod.rb	/^  module GameMod$/;"	m	class:GameStore
+GameProps	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/game_props.rb	/^  class GameProps$/;"	c	class:QuebecLottery
+GameStats	/code/orig/baseball_lottery/lib/baseball_lottery/simback_setup.rb	/^  class GameStats$/;"	c	class:SimBack
+GameStore	/code/orig/game_store/app/models/game_store/game.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/app/models/game_store/game_create.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/app/models/game_store/game_mod.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/app/models/game_store/league.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/app/models/game_store/season.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/app/models/game_store/season_mod.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/app/models/game_store/team.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/app/models/game_store/team_mod.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/lib/game_store.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/lib/game_store/engine.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/lib/game_store/game.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/lib/game_store/game_create.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/lib/game_store/game_mod.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/lib/game_store/league.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/lib/game_store/season.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/lib/game_store/season_mod.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/lib/game_store/team.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/lib/game_store/team_mod.rb	/^module GameStore$/;"	m
+GameStore	/code/orig/game_store/lib/game_store/util.rb	/^module GameStore$/;"	m
+Games	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/games.rb	/^  class Games$/;"	c	class:QuebecLottery
+GeneticAlgorithm	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^class GeneticAlgorithm$/;"	c
+Hash	/code/orig/baseball_projection/lib/baseball_projection/ext.rb	/^class Hash$/;"	c
+Hash	/code/orig/bet_store/junk/deps.rb	/^class Hash$/;"	c
+Hash	/code/orig/odds/lib/odds/ext/hash.rb	/^class Hash$/;"	c
+Hash	/code/orig/odds/lib/odds/ext/math.rb	/^class Hash$/;"	c
+HockeyDay	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^  class HockeyDay < Day$/;"	c	class:EspnScores
+HockeyGame	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^  class HockeyGame < Game$/;"	c	class:EspnScores
+InstanceMethods	/code/orig/bet_store/junk/app/models/bet_store/richer_field.rb	/^    module InstanceMethods$/;"	m	class:BetStore.RicherField
+IntermediateSummaryWorker	/code/orig/baseball_lottery/spec/support_ext/summary_worker_reschedule.rb	/^  class IntermediateSummaryWorker$/;"	c	class:SimBack
+IntermediateSummaryWorker	/code/orig/sim_back/lib/sim_back/summary_worker.rb	/^  class IntermediateSummaryWorker$/;"	c	class:SimBack
+IntermediateSummaryWorker	/code/orig/sim_back/spec/support_ext/basic_imp.rb	/^  class IntermediateSummaryWorker$/;"	c	class:SimBack
+Kelly	/code/orig/odds/lib/odds/algorithms/kelly.rb	/^    module Kelly$/;"	m	class:Odds.Algorithms
+League	/code/orig/game_store/app/models/game_store/league.rb	/^  class League$/;"	c	class:GameStore
+League	/code/orig/game_store/lib/game_store/league.rb	/^  class League$/;"	c	class:GameStore
+Lines	/code/orig/odds/lib/odds/lines.rb	/^  class Lines$/;"	c	class:Odds
+Lineup	/code/orig/baseball/lib/baseball/lineup.rb	/^  class Lineup$/;"	c	class:Baseball
+LoadSims	/code/orig/odds/lib/odds/special/load_sims.rb	/^  class LoadSims$/;"	c	class:Odds
+MalformedDateError	/code/orig/espn_scores/lib/espn_scores/date_parse.rb	/^  class MalformedDateError < RuntimeError$/;"	c	class:EspnScores
+MatchedSides	/code/orig/bet_store/app/models/bet_store/matched_sides.rb	/^  class MatchedSides$/;"	c	class:BetStore
+MatchedSides	/code/orig/bet_store/lib/bet_store/matched_sides.rb	/^  class MatchedSides$/;"	c	class:BetStore
+MongoidGemConfig	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^module MongoidGemConfig$/;"	m
+MongoidGemConfig	/code/orig/mongoid_gem_config/lib/mongoid_gem_config/rich_field.rb	/^module MongoidGemConfig$/;"	m
+MyLogger	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^class MyLogger$/;"	c
+NullSide	/code/orig/bet_store/app/models/bet_store/matched_sides.rb	/^  class NullSide$/;"	c	class:BetStore
+NullSide	/code/orig/bet_store/lib/bet_store/matched_sides.rb	/^  class NullSide$/;"	c	class:BetStore
+NumberObj	/code/orig/sim_back/spec/support_ext/basic_imp.rb	/^  class NumberObj$/;"	c	class:SimBack
+Numeric	/code/orig/odds/lib/odds/ext/numeric.rb	/^class Numeric$/;"	c
+Numeric	/code/orig/odds/lib/odds/ext/string.rb	/^class Numeric$/;"	c
+Object	/code/orig/baseball_projection/lib/baseball_projection.rb	/^class Object$/;"	c
+Object	/code/orig/bet_store/junk/deps.rb	/^class Object$/;"	c
+Object	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^class Object$/;"	c
+Object	/code/orig/odds/lib/odds/ext/object.rb	/^class Object$/;"	c
+Object	/code/orig/quebec_lottery/gem/lib/quebec_lottery.rb	/^class Object$/;"	c
+Object	/code/orig/sim_back/lib/sim_back.rb	/^class Object$/;"	c
+Odds	/code/orig/baseball_lottery/lib/baseball_lottery.rb	/^module Odds$/;"	m
+Odds	/code/orig/bet_store/lib/bet_store/ext/odds_ext.rb	/^  class Odds$/;"	c	class:Odds
+Odds	/code/orig/bet_store/lib/bet_store/ext/odds_ext.rb	/^module Odds$/;"	m
+Odds	/code/orig/odds/lib/odds/algorithms/correlated_kelly.rb	/^module Odds$/;"	m
+Odds	/code/orig/odds/lib/odds/algorithms/kelly.rb	/^module Odds$/;"	m
+Odds	/code/orig/odds/lib/odds/algorithms/parlay_utility.rb	/^module Odds$/;"	m
+Odds	/code/orig/odds/lib/odds/bet.rb	/^module Odds$/;"	m
+Odds	/code/orig/odds/lib/odds/lines.rb	/^module Odds$/;"	m
+Odds	/code/orig/odds/lib/odds/odds.rb	/^  class Odds$/;"	c	class:Odds
+Odds	/code/orig/odds/lib/odds/odds.rb	/^module Odds$/;"	m
+Odds	/code/orig/odds/lib/odds/parlay.rb	/^module Odds$/;"	m
+Odds	/code/orig/odds/lib/odds/special/combination_parlay.rb	/^module Odds$/;"	m
+Odds	/code/orig/odds/lib/odds/special/load_sims.rb	/^module Odds$/;"	m
+OverUnder	/code/orig/baseball_lottery/lib/baseball_lottery/season_props.rb	/^    class OverUnder < Base$/;"	c	class:BaseballLottery.SeasonProp
+OverUnder	/code/orig/bet_store/app/models/bet_store/question.rb	/^    class OverUnder < Base$/;"	c	class:BetStore.Question
+OverUnder	/code/orig/bet_store/app/models/bet_store/question.rb	/^    class OverUnder::Player < OverUnder$/;"	c	class:BetStore.Question
+OverUnder	/code/orig/bet_store/junk/app/models/bet_store/question.rb	/^    class OverUnder < Base$/;"	c	class:BetStore.Question
+OverUnder	/code/orig/bet_store/junk/app/models/bet_store/question.rb	/^    class OverUnder::Player < OverUnder$/;"	c	class:BetStore.Question
+OverUnder	/code/orig/bet_store/lib/bet_store/question.rb	/^    class OverUnder < Base$/;"	c	class:BetStore.Question
+OverUnder	/code/orig/bet_store/lib/bet_store/question.rb	/^    class OverUnder::Player < OverUnder$/;"	c	class:BetStore.Question
+PaEstimate	/code/orig/baseball_projection/lib/baseball_projection/pa_estimate.rb	/^  class PaEstimate$/;"	c	class:BaseballProjection
+Page	/code/orig/quebec_lottery/gem/junk/cache.rb	/^  class Page$/;"	c	class:QuebecLottery
+Pages	/code/orig/quebec_lottery/gem/lib/quebec_lottery/pages.rb	/^  class Pages$/;"	c	class:QuebecLottery
+Parlay	/code/orig/odds/lib/odds/parlay.rb	/^  class Parlay$/;"	c	class:Odds
+ParlayPercs	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^class ParlayPercs$/;"	c
+ParlayUtility	/code/orig/odds/lib/odds/algorithms/parlay_utility.rb	/^    class ParlayUtility$/;"	c	class:Odds.Algorithms
+Parser	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^  class Parser$/;"	c
+Player	/code/orig/baseball/lib/baseball/player.rb	/^  class Player$/;"	c	class:Baseball
+Player	/code/orig/bet_store/app/models/bet_store/side.rb	/^    class Player < Base$/;"	c	class:BetStore.Side.Base
+Player	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^    class Player < Base$/;"	c	class:BetStore.Side.Base
+Player	/code/orig/bet_store/lib/bet_store/side.rb	/^    class Player < Base$/;"	c	class:BetStore.Side.Base
+Projections	/code/orig/baseball_projection/lib/baseball_projection/single_projection.rb	/^  class Projections$/;"	c
+Prop	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/prop.rb	/^  class Prop$/;"	c	class:QuebecLottery
+PropLine	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/prop_line.rb	/^  class PropLine$/;"	c	class:QuebecLottery
+QuebecLottery	/code/orig/quebec_lottery/gem/junk/cache.rb	/^module QuebecLottery$/;"	m
+QuebecLottery	/code/orig/quebec_lottery/gem/lib/quebec_lottery.rb	/^module QuebecLottery$/;"	m
+QuebecLottery	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/game_props.rb	/^module QuebecLottery$/;"	m
+QuebecLottery	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/games.rb	/^module QuebecLottery$/;"	m
+QuebecLottery	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/load.rb	/^module QuebecLottery$/;"	m
+QuebecLottery	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/prop.rb	/^module QuebecLottery$/;"	m
+QuebecLottery	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/prop_line.rb	/^module QuebecLottery$/;"	m
+QuebecLottery	/code/orig/quebec_lottery/gem/lib/quebec_lottery/pages.rb	/^module QuebecLottery$/;"	m
+QuebecLottery	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/save_prop.rb	/^module QuebecLottery$/;"	m
+QuebecLottery	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^module QuebecLottery$/;"	m
+QuebecLottery	/code/orig/quebec_lottery/gem/spec/support/samples.rb	/^module QuebecLottery$/;"	m
+Question	/code/orig/bet_store/app/models/bet_store/question.rb	/^  module Question$/;"	m	class:BetStore
+Question	/code/orig/bet_store/junk/app/models/bet_store/question.rb	/^  module Question$/;"	m	class:BetStore
+Question	/code/orig/bet_store/lib/bet_store/question.rb	/^  module Question$/;"	m	class:BetStore
+QuestionApi	/code/orig/bet_store/lib/bet_store/question_api.rb	/^  class QuestionApi$/;"	c	class:BetStore
+Queue	/code/orig/sim_back/lib/sim_back/queue.rb	/^  class Queue$/;"	c	class:SimBack
+RandomizedProjection	/code/orig/baseball_projection/lib/baseball_projection/randomized_projection.rb	/^  class RandomizedProjection$/;"	c	class:BaseballProjection
+Range	/code/orig/odds/lib/odds/ext/rand.rb	/^class Range$/;"	c
+RichField	/code/orig/mongoid_gem_config/lib/mongoid_gem_config/rich_field.rb	/^  module RichField$/;"	m	class:MongoidGemConfig
+RicherField	/code/orig/bet_store/junk/app/models/bet_store/richer_field.rb	/^  module RicherField$/;"	m	class:BetStore
+Samples	/code/orig/baseball_projection/lib/baseball_projection/samples.rb	/^  class Samples$/;"	c	class:BaseballProjection
+SaveGameProp	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/load.rb	/^  class SaveGameProp$/;"	c	class:QuebecLottery
+SaveProp	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/save_prop.rb	/^  class SaveProp$/;"	c	class:QuebecLottery
+SavedProjection	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^  class SavedProjection$/;"	c	class:BaseballProjection
+Scenario	/code/orig/odds/lib/odds/algorithms/parlay_utility.rb	/^      class Scenario$/;"	c	class:Odds.Algorithms.ParlayUtility
+Season	/code/orig/bet_store/app/models/bet_store/season.rb	/^  class Season$/;"	c	class:BetStore
+Season	/code/orig/bet_store/lib/bet_store/season.rb	/^  class Season$/;"	c	class:BetStore
+Season	/code/orig/game_store/app/models/game_store/season.rb	/^  class Season$/;"	c	class:GameStore
+Season	/code/orig/game_store/lib/game_store/season.rb	/^  class Season$/;"	c	class:GameStore
+SeasonMod	/code/orig/game_store/app/models/game_store/season_mod.rb	/^  module SeasonMod$/;"	m	class:GameStore
+SeasonMod	/code/orig/game_store/lib/game_store/season_mod.rb	/^  module SeasonMod$/;"	m	class:GameStore
+SeasonProp	/code/orig/baseball_lottery/lib/baseball_lottery/season_props.rb	/^  module SeasonProp$/;"	m	class:BaseballLottery
+SeasonProp	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^  class SeasonProp$/;"	c
+SeasonProps	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^  class SeasonProps$/;"	c	class:QuebecLottery
+Side	/code/orig/bet_store/app/models/bet_store/side.rb	/^  module Side$/;"	m	class:BetStore
+Side	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^  module Side$/;"	m	class:BetStore
+Side	/code/orig/bet_store/lib/bet_store/side.rb	/^  module Side$/;"	m	class:BetStore
+SideEstimate	/code/orig/bet_store/app/models/bet_store/side_estimate.rb	/^  class SideEstimate$/;"	c	class:BetStore
+SideEstimate	/code/orig/bet_store/junk/app/models/bet_store/side_estimate.rb	/^  class SideEstimate$/;"	c	class:BetStore
+SideEstimate	/code/orig/bet_store/lib/bet_store/side_estimate.rb	/^  class SideEstimate$/;"	c	class:BetStore
+Sim	/code/orig/baseball_lottery/lib/baseball_lottery/simback_setup.rb	/^  class Sim$/;"	c	class:SimBack
+Sim	/code/orig/odds/vol/parlays_as_horses.rb	/^class Sim$/;"	c
+Sim	/code/orig/sim_back/lib/sim_back/sim.rb	/^  class Sim$/;"	c	class:SimBack
+Sim	/code/orig/sim_back/spec/support_ext/basic_imp.rb	/^  class Sim$/;"	c	class:SimBack
+SimBack	/code/orig/baseball_lottery/lib/baseball_lottery/simback_setup.rb	/^module SimBack$/;"	m
+SimBack	/code/orig/baseball_lottery/spec/support_ext/summary_worker_reschedule.rb	/^module SimBack$/;"	m
+SimBack	/code/orig/sim_back/lib/sim_back.rb	/^module SimBack$/;"	m
+SimBack	/code/orig/sim_back/lib/sim_back/consolidate_worker.rb	/^module SimBack$/;"	m
+SimBack	/code/orig/sim_back/lib/sim_back/queue.rb	/^module SimBack$/;"	m
+SimBack	/code/orig/sim_back/lib/sim_back/sim.rb	/^module SimBack$/;"	m
+SimBack	/code/orig/sim_back/lib/sim_back/sim_progress.rb	/^module SimBack$/;"	m
+SimBack	/code/orig/sim_back/lib/sim_back/sims.rb	/^module SimBack$/;"	m
+SimBack	/code/orig/sim_back/lib/sim_back/summary_worker.rb	/^module SimBack$/;"	m
+SimBack	/code/orig/sim_back/lib/sim_back/util.rb	/^module SimBack$/;"	m
+SimBack	/code/orig/sim_back/lib/sim_back/web/web.rb	/^module SimBack$/;"	m
+SimBack	/code/orig/sim_back/lib/sim_back/worker.rb	/^module SimBack$/;"	m
+SimBack	/code/orig/sim_back/spec/support_ext/basic_imp.rb	/^module SimBack$/;"	m
+SimBack	/code/orig/sim_back/spec/support_ext/summary_worker_reschedule.rb	/^module SimBack$/;"	m
+SimProgress	/code/orig/sim_back/lib/sim_back/sim_progress.rb	/^  class SimProgress$/;"	c	class:SimBack
+Sims	/code/orig/baseball_lottery/lib/baseball_lottery/sims.rb	/^  class Sims$/;"	c
+Sims	/code/orig/odds/vol/parlays_as_horses.rb	/^class Sims$/;"	c
+Sims	/code/orig/sim_back/lib/sim_back/sims.rb	/^  class Sims$/;"	c	class:SimBack
+SingleProjection	/code/orig/baseball_projection/lib/baseball_projection/single_projection.rb	/^  class SingleProjection$/;"	c	class:BaseballProjection
+Source	/code/orig/bet_store/app/models/bet_store/source.rb	/^  class Source$/;"	c	class:BetStore
+Source	/code/orig/bet_store/junk/app/models/bet_store/source.rb	/^  class Source$/;"	c	class:BetStore
+Source	/code/orig/bet_store/lib/bet_store/source.rb	/^  class Source$/;"	c	class:BetStore
+Sport	/code/orig/espn_scores/lib/espn_scores/sport.rb	/^  class Sport$/;"	c	class:EspnScores
+Stat	/code/orig/baseball_projection/lib/baseball_projection/stat.rb	/^  class Stat$/;"	c	class:BaseballProjection
+StatBet	/code/orig/baseball_lottery/lib/baseball_lottery/stat_bet.rb	/^  class StatBet$/;"	c	class:BaseballLottery
+Stats	/code/orig/baseball/lib/baseball/stats.rb	/^  class Stats$/;"	c	class:Baseball
+String	/code/orig/odds/lib/odds/ext/to_odds.rb	/^class String$/;"	c
+String	/code/orig/quebec_lottery/gem/lib/quebec_lottery.rb	/^class String$/;"	c
+SummaryMod	/code/orig/sim_back/lib/sim_back/summary_worker.rb	/^  module SummaryMod$/;"	m	class:SimBack
+SummaryObj	/code/orig/baseball_lottery/lib/baseball_lottery/simback_setup.rb	/^  class SummaryObj$/;"	c	class:SimBack
+SummaryWorker	/code/orig/baseball_lottery/lib/baseball_lottery/simback_setup.rb	/^  class SummaryWorker$/;"	c	class:SimBack
+SummaryWorker	/code/orig/baseball_lottery/spec/support_ext/summary_worker_reschedule.rb	/^  class SummaryWorker$/;"	c	class:SimBack
+SummaryWorker	/code/orig/sim_back/lib/sim_back/summary_worker.rb	/^  class SummaryWorker$/;"	c	class:SimBack
+SummaryWorker	/code/orig/sim_back/spec/support_ext/basic_imp.rb	/^  class SummaryWorker$/;"	c	class:SimBack
+SummaryWorker	/code/orig/sim_back/spec/support_ext/summary_worker_reschedule.rb	/^  class SummaryWorker$/;"	c	class:SimBack
+Team	/code/orig/bet_store/app/models/bet_store/side.rb	/^    class Team < Base$/;"	c	class:BetStore.Side.Base
+Team	/code/orig/bet_store/app/models/bet_store/team.rb	/^  class Team$/;"	c	class:BetStore
+Team	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^    class Team < Base$/;"	c	class:BetStore.Side.Base
+Team	/code/orig/bet_store/lib/bet_store/side.rb	/^    class Team < Base$/;"	c	class:BetStore.Side.Base
+Team	/code/orig/bet_store/lib/bet_store/team.rb	/^  class Team$/;"	c	class:BetStore
+Team	/code/orig/game_store/app/models/game_store/team.rb	/^  class Team$/;"	c	class:GameStore
+Team	/code/orig/game_store/lib/game_store/team.rb	/^  class Team$/;"	c	class:GameStore
+TeamMod	/code/orig/game_store/app/models/game_store/team_mod.rb	/^  module TeamMod$/;"	m	class:GameStore
+TeamMod	/code/orig/game_store/lib/game_store/team_mod.rb	/^  module TeamMod$/;"	m	class:GameStore
+TrueTalent	/code/orig/baseball_projection/lib/baseball_projection/true_talent.rb	/^  class TrueTalent$/;"	c	class:BaseballProjection
+TruthHash	/code/orig/baseball_lottery/lib/baseball_lottery/sims.rb	/^  class TruthHash$/;"	c	class:BaseballLottery
+Vs	/code/orig/baseball_lottery/lib/baseball_lottery/season_props.rb	/^    class Vs < Base$/;"	c	class:BaseballLottery.SeasonProp
+Vs	/code/orig/bet_store/app/models/bet_store/question.rb	/^    class Vs < Base$/;"	c	class:BetStore.Question
+Vs	/code/orig/bet_store/junk/app/models/bet_store/question.rb	/^    class Vs < Base$/;"	c	class:BetStore.Question
+Vs	/code/orig/bet_store/lib/bet_store/question.rb	/^    class Vs < Base$/;"	c	class:BetStore.Question
+Web	/code/orig/espn_scores/lib/espn_scores/web.rb	/^  class Web < Sinatra::Base$/;"	c	class:EspnScores
+Web	/code/orig/sim_back/lib/sim_back/web/web.rb	/^  class Web < Sinatra::Base$/;"	c	class:SimBack
+Week	/code/orig/espn_scores/lib/espn_scores/week.rb	/^  class Week$/;"	c	class:EspnScores
+Worker	/code/orig/sim_back/lib/sim_back/worker.rb	/^  class Worker$/;"	c
+ab	/code/orig/baseball_projection/lib/baseball_projection/calced_stats_mod.rb	/^    def ab$/;"	f	class:BaseballProjection.CalcedStatsMod
+abs_exp	/code/orig/odds/lib/odds/ext/numeric.rb	/^  def abs_exp(e)$/;"	f	class:Numeric
+actual_profit	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^  def actual_profit$/;"	f	class:ParlayPercs
+add	/code/orig/baseball/lib/baseball/bases.rb	/^    def add(player,player_bases)$/;"	f	class:Baseball.Bases
+add	/code/orig/baseball/lib/baseball/stats.rb	/^    def add(player,stat,num)$/;"	f	class:Baseball.Stats
+add	/code/orig/baseball_projection/lib/baseball_projection/stat.rb	/^      def add(name,ops={})$/;"	f	class:BaseballProjection.Stat
+add	/code/orig/quebec_lottery/gem/lib/quebec_lottery/pages.rb	/^    def add(name,urls)$/;"	f	class:QuebecLottery.Pages
+add_prop	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def add_prop(text)$/;"	f	class:Parser
+add_to_parlay_comb_win_hash!	/code/orig/odds/vol/parlays_as_horses.rb	/^  def add_to_parlay_comb_win_hash!(sims)$/;"	f	class:Sims
+adj_factor	/code/orig/odds/vol/parlays_as_horses.rb	/^  def adj_factor$/;"	f	class:Sim
+advance!	/code/orig/baseball/lib/baseball/lineup.rb	/^    def advance!$/;"	f	class:Baseball.Lineup
+all	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^    def all$/;"	f	class:BaseballProjection.EnsuredWhere
+all_bets	/code/orig/baseball_lottery/lib/baseball_lottery/sims.rb	/^    def all_bets$/;"	f	class:Sims
+all_combinations	/code/orig/odds/lib/odds/ext/math.rb	/^  def all_combinations(r=nil)$/;"	f	class:Array
+all_combinations	/code/orig/odds/lib/odds/ext/math.rb	/^  def all_combinations(r=nil)$/;"	f	class:Hash
+as_json	/code/orig/espn_scores/lib/espn_scores/day.rb	/^    def as_json(*args)$/;"	f	class:EspnScores.Day
+as_json	/code/orig/espn_scores/lib/espn_scores/game.rb	/^    def as_json(*args)$/;"	f	class:EspnScores.Game
+at_least	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^      def at_least(num,ops={})$/;"	f	class:BaseballProjection.SavedProjection
+at_least	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^  def self.at_least(*args)$/;"	F
+attrs	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/prop_line.rb	/^    def attrs$/;"	f	class:QuebecLottery.PropLine
+attrs	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def attrs$/;"	f	class:SeasonProp
+avg	/code/orig/baseball_projection/lib/baseball_projection.rb	/^  def avg$/;"	f	class:Array
+avg	/code/orig/baseball_projection/lib/baseball_projection/calced_stats_mod.rb	/^    def avg$/;"	f	class:BaseballProjection.CalcedStatsMod
+away_name	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^    def away_name$/;"	f	class:EspnScores.BaseballGame
+away_name	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^    def away_name$/;"	f	class:EspnScores.BasketballGame
+away_name	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^    def away_name$/;"	f	class:EspnScores.FootballGame
+away_name	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^    def away_name$/;"	f	class:EspnScores.HockeyGame
+away_score	/code/orig/espn_scores/lib/espn_scores/game.rb	/^    def away_score$/;"	f	class:EspnScores.Game
+away_score	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^    def away_score$/;"	f	class:EspnScores.HockeyGame
+away_team	/code/orig/espn_scores/lib/espn_scores/game.rb	/^    def away_team$/;"	f	class:EspnScores.Game
+away_team	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^    def away_team$/;"	f	class:EspnScores.HockeyGame
+belongs_to	/code/orig/mongoid_gem_config/lib/mongoid_gem_config/rich_field.rb	/^      def belongs_to(name,ops={})$/;"	f	class:MongoidGemConfig.RichField.ClassMethods
+bet	/code/orig/odds/spec/algorithms/correlated_kelly_spec.rb	/^  def bet(win_chance,odds_factor)$/;"	f
+bet	/code/orig/odds/spec/lines_spec.rb	/^  def bet(odds)$/;"	f
+bet_conds	/code/orig/baseball_lottery/lib/baseball_lottery/sims.rb	/^    def bet_conds(comb)$/;"	f	class:BaseballLottery.TruthHash
+bet_string	/code/orig/odds/vol/parlays_as_horses.rb	/^  def bet_string$/;"	f	class:Sim
+bets	/code/orig/baseball_lottery/lib/baseball_lottery/stat_bet.rb	/^    def bets$/;"	f	class:BaseballLottery.StatBet
+blank?	/code/orig/quebec_lottery/gem/lib/quebec_lottery.rb	/^  def blank?$/;"	f	class:Object
+body	/code/orig/baseball_lottery/lib/baseball_lottery/simback_setup.rb	/^    def body(start_time)$/;"	f	class:SimBack.SummaryObj
+cached_until	/code/orig/espn_scores/lib/espn_scores/web.rb	/^      def cached_until$/;"	f	class:EspnScores.Web
+calc!	/code/orig/baseball_projection/lib/baseball_projection/composite_projection.rb	/^    def calc!$/;"	f	class:BaseballProjection.CompositeProjection
+calc_event	/code/orig/baseball/lib/baseball/player.rb	/^    def calc_event$/;"	f	class:Baseball.Player
+calc_one	/code/orig/baseball_projection/lib/baseball_projection/true_talent.rb	/^    def calc_one$/;"	f	class:BaseballProjection.TrueTalent
+calc_win_chance	/code/orig/baseball_lottery/lib/baseball_lottery/sims.rb	/^    def calc_win_chance(bets)$/;"	f	class:Sims
+candidate	/code/orig/odds/lib/odds/algorithms/correlated_kelly.rb	/^        def candidate$/;"	f	class:Odds.Algorithms.CorrelatedKelly.Calc
+cell_lines	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/prop.rb	/^    def cell_lines$/;"	f	class:QuebecLottery.Prop
+classes	/code/orig/sim_back/lib/sim_back/util.rb	/^    def classes$/;"	f	class:SimBack
+clear!	/code/orig/baseball/lib/baseball/bases.rb	/^    def clear!$/;"	f	class:Baseball.Bases
+clear_expected_win_chance!	/code/orig/baseball_lottery/lib/baseball_lottery/tasks.rb	/^    def clear_expected_win_chance!$/;"	f	class:BaseballLottery
+combinations	/code/orig/baseball_lottery/lib/baseball_lottery/sims.rb	/^    def combinations(remaining=bets)$/;"	f	class:BaseballLottery.TruthHash
+completed_sims	/code/orig/sim_back/lib/sim_back/sim_progress.rb	/^    def completed_sims$/;"	f	class:SimBack.SimProgress
+config_for	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^  def config_for(g)$/;"	f	class:CompositeMongoConfig
+connect!	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^    def connect!(env)$/;"	f	class:MongoidGemConfig
+connect!	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^  def connect!(env)$/;"	f	class:CompositeMongoConfig
+connect_to_mongo!	/code/orig/baseball_lottery/lib/baseball_lottery.rb	/^    def connect_to_mongo!(env)$/;"	f	class:BaseballLottery
+connect_to_mongox!	/code/orig/baseball_lottery/lib/baseball_lottery.rb	/^    def connect_to_mongox!(env)$/;"	f	class:BaseballLottery
+consolidate	/code/orig/sim_back/lib/sim_back/consolidate_worker.rb	/^    def consolidate(progress)$/;"	f	class:SimBack.ConsolidateWorker
+consolidate_once	/code/orig/sim_back/lib/sim_back/consolidate_worker.rb	/^    def consolidate_once(progress)$/;"	f	class:SimBack.ConsolidateWorker
+consolidate_once	/code/orig/sim_back/spec/support_ext/basic_imp.rb	/^    def consolidate_once(progress)$/;"	f	class:ConsolidateWorker
+contains?	/code/orig/espn_scores/lib/espn_scores/week.rb	/^    def contains?(date)$/;"	f	class:EspnScores.Week
+count	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^    def count(ops)$/;"	f	class:BaseballProjection.EnsuredWhere
+count	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/games.rb	/^    def count$/;"	f	class:QuebecLottery.Games
+count_gt	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^    def count_gt(ops)$/;"	f	class:BaseballProjection.EnsuredWhere
+count_lt	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^    def count_lt(ops)$/;"	f	class:BaseballProjection.EnsuredWhere
+create!	/code/orig/baseball_projection/lib/baseball_projection/randomized_projection.rb	/^    def create!$/;"	f	class:BaseballProjection.RandomizedProjection
+create!	/code/orig/game_store/app/models/game_store/game_create.rb	/^    def create!$/;"	f	class:GameStore.GameCreate
+create!	/code/orig/game_store/lib/game_store/game_create.rb	/^    def create!$/;"	f	class:GameStore.GameCreate
+create!	/code/orig/odds/vol/parlays_as_horses.rb	/^  def create!$/;"	f	class:Sims
+create_one!	/code/orig/baseball_projection/lib/baseball_projection/randomized_projection.rb	/^    def create_one!(stat)$/;"	f	class:BaseballProjection.RandomizedProjection
+current?	/code/orig/espn_scores/lib/espn_scores/date_parse.rb	/^      def current?(ops)$/;"	f	class:EspnScores.DateParse
+current?	/code/orig/espn_scores/lib/espn_scores/week.rb	/^      def current?(ops)$/;"	f	class:EspnScores.Week
+current?	/code/orig/espn_scores/lib/espn_scores/week.rb	/^    def current?$/;"	f	class:EspnScores.Week
+current_player	/code/orig/baseball/lib/baseball/lineup.rb	/^    def current_player$/;"	f	class:Baseball.Lineup
+date_for_week	/code/orig/espn_scores/lib/espn_scores/week.rb	/^      def date_for_week(ops)$/;"	f	class:EspnScores.Week
+date_method	/code/orig/espn_scores/lib/espn_scores/day.rb	/^      def date_method$/;"	f	class:EspnScores.Day
+date_method	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^    def self.date_method$/;"	F	class:EspnScores.BaseFootballDay
+date_normal	/code/orig/espn_scores/lib/espn_scores/date_parse.rb	/^    def date_normal$/;"	f	class:EspnScores.DateParse
+date_or_week	/code/orig/espn_scores/lib/espn_scores/web.rb	/^      def date_or_week$/;"	f	class:EspnScores.Web
+date_week	/code/orig/espn_scores/lib/espn_scores/date_parse.rb	/^    def date_week$/;"	f	class:EspnScores.DateParse
+delete_all!	/code/orig/sim_back/lib/sim_back/util.rb	/^    def delete_all!$/;"	f	class:SimBack
+delete_jobs!	/code/orig/sim_back/lib/sim_back/util.rb	/^    def delete_jobs!$/;"	f	class:SimBack
+demongoize	/code/orig/bet_store/lib/bet_store/ext/odds_ext.rb	/^      def demongoize(object)$/;"	f	class:Odds.Odds
+deps_for	/code/orig/bet_store/junk/deps.rb	/^def deps_for(dir)$/;"	f
+desc	/code/orig/game_store/app/models/game_store/game_mod.rb	/^    def desc$/;"	f	class:GameStore.GameMod
+desc	/code/orig/game_store/app/models/game_store/season_mod.rb	/^    def desc$/;"	f	class:GameStore.SeasonMod
+desc	/code/orig/game_store/lib/game_store/game_mod.rb	/^    def desc$/;"	f	class:GameStore.GameMod
+desc	/code/orig/game_store/lib/game_store/season_mod.rb	/^    def desc$/;"	f	class:GameStore.SeasonMod
+desc	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/game_props.rb	/^    def desc$/;"	f	class:QuebecLottery.GameProps
+destroy_all!	/code/orig/bet_store/lib/bet_store/util.rb	/^    def destroy_all!$/;"	f	class:BetStore
+destroy_all!	/code/orig/game_store/lib/game_store/util.rb	/^    def destroy_all!$/;"	f	class:GameStore
+each	/code/orig/bet_store/app/models/bet_store/matched_sides.rb	/^    def each(&b)$/;"	f	class:BetStore.MatchedSides
+each	/code/orig/bet_store/lib/bet_store/matched_sides.rb	/^    def each(&b)$/;"	f	class:BetStore.MatchedSides
+each	/code/orig/odds/lib/odds/lines.rb	/^    def each(&b)$/;"	f	class:Odds.Lines
+each_chunk_size	/code/orig/sim_back/lib/sim_back/queue.rb	/^      def each_chunk_size(num_sims)$/;"	f	class:SimBack.Queue
+each_sorted_by_value_desc	/code/orig/odds/lib/odds/ext/hash.rb	/^  def each_sorted_by_value_desc(&b)$/;"	f	class:Hash
+ensure_base_data!	/code/orig/game_store/lib/game_store/util.rb	/^    def ensure_base_data!$/;"	f	class:GameStore
+ensured_count	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^      def ensured_count(num,ensure_ops,where_ops)$/;"	f	class:BaseballProjection.SavedProjection
+estimate	/code/orig/baseball_projection/spec/pa_estimate_spec.rb	/^  def estimate$/;"	f
+etag_name	/code/orig/espn_scores/lib/espn_scores/web.rb	/^      def etag_name$/;"	f	class:EspnScores.Web
+evolve	/code/orig/bet_store/lib/bet_store/ext/odds_ext.rb	/^      def evolve(object)$/;"	f	class:Odds.Odds
+expected_profit	/code/orig/bet_store/app/models/bet_store/side.rb	/^      def expected_profit$/;"	f	class:BetStore.Side.Base
+expected_profit	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^      def expected_profit$/;"	f	class:BetStore.Side.Base
+expected_profit	/code/orig/bet_store/lib/bet_store/side.rb	/^      def expected_profit$/;"	f	class:BetStore.Side.Base
+expected_profit	/code/orig/odds/lib/odds/bet.rb	/^      def expected_profit$/;"	f	class:Odds.Bet.ExpectedProfit
+expected_win_chance	/code/orig/bet_store/app/models/bet_store/side.rb	/^      def expected_win_chance$/;"	f	class:BetStore.Side.Base
+expected_win_chance	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^      def expected_win_chance$/;"	f	class:BetStore.Side.Base
+expected_win_chance	/code/orig/bet_store/lib/bet_store/side.rb	/^      def expected_win_chance$/;"	f	class:BetStore.Side.Base
+expected_win_chance=	/code/orig/bet_store/app/models/bet_store/side.rb	/^      def expected_win_chance=(wc)$/;"	f	class:BetStore.Side.Base
+expected_win_chance=	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^      def expected_win_chance=(wc)$/;"	f	class:BetStore.Side.Base
+expected_win_chance=	/code/orig/bet_store/lib/bet_store/side.rb	/^      def expected_win_chance=(wc)$/;"	f	class:BetStore.Side.Base
+expires_in	/code/orig/espn_scores/lib/espn_scores/web.rb	/^      def expires_in$/;"	f	class:EspnScores.Web
+fake	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^def fake$/;"	f
+field	/code/orig/mongoid_gem_config/lib/mongoid_gem_config/rich_field.rb	/^      def field(name,ops={})$/;"	f	class:MongoidGemConfig.RichField.ClassMethods
+fill_zeroes!	/code/orig/baseball_lottery/lib/baseball_lottery/simback_setup.rb	/^    def fill_zeroes!$/;"	f	class:SimBack.GameStats
+find_one_object	/code/orig/sim_back/lib/sim_back/sim_progress.rb	/^    def self.find_one_object(id)$/;"	F	class:SimBack.SimProgress
+find_or_create!	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^  def find_or_create!(ops)$/;"	f	class:Object
+first_only	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^  def first_only(ops=nil)$/;"	f	class:Object
+fitness	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^  def fitness$/;"	f	class:ParlayPercs
+fix_nickname	/code/orig/game_store/app/models/game_store/game_create.rb	/^    def fix_nickname(name)$/;"	f	class:GameStore.GameCreate
+fix_nickname	/code/orig/game_store/lib/game_store/game_create.rb	/^    def fix_nickname(name)$/;"	f	class:GameStore.GameCreate
+fixed_prop	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def fixed_prop$/;"	f	class:SeasonProp
+for	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/save_prop.rb	/^      def for(props)$/;"	f	class:QuebecLottery.SaveProp
+for_game	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/load.rb	/^      def for_game(game)$/;"	f	class:QuebecLottery.SaveGameProp
+for_games	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/load.rb	/^      def for_games(games)$/;"	f	class:QuebecLottery.SaveGameProp
+format	/code/orig/espn_scores/lib/espn_scores/web.rb	/^      def format$/;"	f	class:EspnScores.Web
+from_decimal_odds	/code/orig/odds/lib/odds/odds.rb	/^      def from_decimal_odds(num)$/;"	f	class:Odds
+from_real	/code/orig/baseball/lib/baseball/player.rb	/^      def from_real(first,last,year)$/;"	f	class:Baseball.Player
+from_string	/code/orig/odds/lib/odds/odds.rb	/^      def from_string(str)$/;"	f	class:Odds
+from_win_amount_with_principal	/code/orig/odds/lib/odds/odds.rb	/^      def from_win_amount_with_principal(num)$/;"	f	class:Odds
+from_win_amount_without_principal	/code/orig/odds/lib/odds/odds.rb	/^      def from_win_amount_without_principal(num)$/;"	f	class:Odds
+game_class	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^    def game_class$/;"	f	class:EspnScores.BaseballDay
+game_class	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^    def game_class$/;"	f	class:EspnScores.BasketballDay
+game_class	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^    def game_class$/;"	f	class:EspnScores.CollegeFootballDay
+game_class	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^    def game_class$/;"	f	class:EspnScores.FootballDay
+game_class	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^    def game_class$/;"	f	class:EspnScores.HockeyDay
+game_or_season_stat_vs	/code/orig/bet_store/lib/bet_store/question_api.rb	/^      def game_or_season_stat_vs(ops)$/;"	f	class:BetStore.QuestionApi
+game_player_stat_over_under	/code/orig/bet_store/lib/bet_store/question_api.rb	/^      def game_player_stat_over_under(ops)$/;"	f	class:BetStore.QuestionApi
+game_spread	/code/orig/bet_store/lib/bet_store/question_api.rb	/^      def game_spread(ops)$/;"	f	class:BetStore.QuestionApi
+game_stat_vs	/code/orig/bet_store/lib/bet_store/question_api.rb	/^      def game_stat_vs(ops)$/;"	f	class:BetStore.QuestionApi
+generations	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^  def generations$/;"	f	class:GeneticAlgorithm
+get	/code/orig/baseball/lib/baseball/stats.rb	/^    def get(name,stat)$/;"	f	class:Baseball.Stats
+get	/code/orig/baseball_projection/lib/baseball_projection/pa_estimate.rb	/^    def get$/;"	f	class:BaseballProjection.PaEstimate
+get	/code/orig/baseball_projection/lib/baseball_projection/single_projection.rb	/^      def get(player_id)$/;"	f	class:BaseballProjection.SingleProjection
+get	/code/orig/baseball_projection/lib/baseball_projection/stat.rb	/^      def get(k)$/;"	f	class:BaseballProjection.Stat
+get	/code/orig/bet_store/app/models/bet_store/question.rb	/^        def get(ops)$/;"	f	class:BetStore.Question.Base
+get	/code/orig/bet_store/app/models/bet_store/source.rb	/^      def get(name)$/;"	f	class:BetStore.Source
+get	/code/orig/bet_store/junk/app/models/bet_store/question.rb	/^        def get(ops)$/;"	f	class:BetStore.Question.Base
+get	/code/orig/bet_store/junk/app/models/bet_store/source.rb	/^      def get(name)$/;"	f	class:BetStore.Source
+get	/code/orig/bet_store/lib/bet_store/question.rb	/^        def get(ops)$/;"	f	class:BetStore.Question.Base
+get	/code/orig/bet_store/lib/bet_store/source.rb	/^      def get(name)$/;"	f	class:BetStore.Source
+get	/code/orig/espn_scores/lib/espn_scores/day.rb	/^      def get(sport, date)$/;"	f	class:EspnScores.Day
+get	/code/orig/espn_scores/lib/espn_scores/sport.rb	/^      def get(sport)$/;"	f	class:EspnScores.Sport
+get	/code/orig/game_store/app/models/game_store/game_mod.rb	/^      def get(ops)$/;"	f	class:GameStore.GameMod.ClassMethods
+get	/code/orig/game_store/app/models/game_store/league.rb	/^      def get(name)$/;"	f	class:GameStore.League
+get	/code/orig/game_store/app/models/game_store/season_mod.rb	/^      def get(league_name,year)$/;"	f	class:GameStore.SeasonMod.ClassMethods
+get	/code/orig/game_store/lib/game_store/game_mod.rb	/^      def get(ops)$/;"	f	class:GameStore.GameMod.ClassMethods
+get	/code/orig/game_store/lib/game_store/league.rb	/^      def get(name)$/;"	f	class:GameStore.League
+get	/code/orig/game_store/lib/game_store/season_mod.rb	/^      def get(league_name,year)$/;"	f	class:GameStore.SeasonMod.ClassMethods
+get	/code/orig/quebec_lottery/gem/junk/cache.rb	/^      def get(url)$/;"	f	class:QuebecLottery.Page
+get	/code/orig/quebec_lottery/gem/lib/quebec_lottery/pages.rb	/^    def get(name,ops={})$/;"	f	class:QuebecLottery.Pages
+get_by_name	/code/orig/baseball_projection/lib/baseball_projection/single_projection.rb	/^      def get_by_name(name)$/;"	f	class:BaseballProjection.SingleProjection
+get_class	/code/orig/espn_scores/lib/espn_scores/day.rb	/^      def get_class(sport)$/;"	f	class:EspnScores.Day
+get_page	/code/orig/espn_scores/lib/espn_scores.rb	/^    def get_page(url)$/;"	f	class:EspnScores
+grouping_key	/code/orig/bet_store/app/models/bet_store/question.rb	/^      def grouping_key$/;"	f	class:BetStore.Question.OverUnder
+grouping_key	/code/orig/bet_store/app/models/bet_store/question.rb	/^      def grouping_key$/;"	f	class:BetStore.Question.Vs
+grouping_key	/code/orig/bet_store/app/models/bet_store/side.rb	/^      def grouping_key$/;"	f	class:BetStore.Side.Base
+grouping_key	/code/orig/bet_store/junk/app/models/bet_store/question.rb	/^      def grouping_key$/;"	f	class:BetStore.Question.OverUnder
+grouping_key	/code/orig/bet_store/junk/app/models/bet_store/question.rb	/^      def grouping_key$/;"	f	class:BetStore.Question.Vs
+grouping_key	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^      def grouping_key$/;"	f	class:BetStore.Side.Base
+grouping_key	/code/orig/bet_store/lib/bet_store/question.rb	/^      def grouping_key$/;"	f	class:BetStore.Question.OverUnder
+grouping_key	/code/orig/bet_store/lib/bet_store/question.rb	/^      def grouping_key$/;"	f	class:BetStore.Question.Vs
+grouping_key	/code/orig/bet_store/lib/bet_store/side.rb	/^      def grouping_key$/;"	f	class:BetStore.Side.Base
+h	/code/orig/baseball_projection/lib/baseball_projection/calced_stats_mod.rb	/^    def h$/;"	f	class:BaseballProjection.CalcedStatsMod
+handle	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def handle(el)$/;"	f	class:Parser
+has_many	/code/orig/mongoid_gem_config/lib/mongoid_gem_config/rich_field.rb	/^      def has_many(name,ops={})$/;"	f	class:MongoidGemConfig.RichField.ClassMethods
+hbp	/code/orig/baseball_projection/lib/baseball_projection/calced_stats_mod.rb	/^    def hbp$/;"	f	class:BaseballProjection.CalcedStatsMod
+home_score	/code/orig/espn_scores/lib/espn_scores/game.rb	/^    def home_score$/;"	f	class:EspnScores.Game
+home_score	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^    def home_score$/;"	f	class:EspnScores.HockeyGame
+home_team	/code/orig/espn_scores/lib/espn_scores/game.rb	/^    def home_team$/;"	f	class:EspnScores.Game
+home_team	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^    def home_team$/;"	f	class:EspnScores.HockeyGame
+id	/code/orig/espn_scores/lib/espn_scores/game.rb	/^    def id$/;"	f	class:EspnScores.Game
+id	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^    def id$/;"	f	class:EspnScores.BaseFootballGame
+included	/code/orig/bet_store/junk/app/models/bet_store/richer_field.rb	/^    def self.included(mod)$/;"	F	class:BetStore.RicherField
+included	/code/orig/mongoid_gem_config/lib/mongoid_gem_config/rich_field.rb	/^    def self.included(mod)$/;"	F	class:MongoidGemConfig.RichField
+initialize	/code/orig/espn_scores/lib/espn_scores/date_parse.rb	/^    def initialize(ops={})$/;"	f	class:EspnScores.DateParse
+initialize	/code/orig/odds/lib/odds/algorithms/correlated_kelly.rb	/^        def initialize(bets)$/;"	f	class:Odds.Algorithms.CorrelatedKelly.Calc
+initialize	/code/orig/odds/lib/odds/odds.rb	/^    def initialize(arg)$/;"	f	class:Odds.Odds
+inverse	/code/orig/odds/lib/odds/odds.rb	/^    def inverse$/;"	f	class:Odds
+jobs?	/code/orig/sim_back/spec/support/fake_runner.rb	/^  def jobs?$/;"	f	class:FakeRunner
+kelly	/code/orig/odds/lib/odds/algorithms/kelly.rb	/^      def kelly$/;"	f	class:Odds.Algorithms.Kelly
+kelly_sim	/code/orig/odds/vol/kelly_sim.rb	/^def kelly_sim(perc)$/;"	f
+klass	/code/orig/baseball_projection/lib/baseball_projection.rb	/^  def klass$/;"	f	class:Object
+klass	/code/orig/odds/lib/odds/ext/object.rb	/^  def klass$/;"	f	class:Object
+klass	/code/orig/sim_back/lib/sim_back.rb	/^  def klass$/;"	f	class:Object
+last_name	/code/orig/baseball_lottery/lib/baseball_lottery/stat_bet.rb	/^    def last_name$/;"	f	class:BaseballLottery.StatBet
+league_name=	/code/orig/game_store/app/models/game_store/team_mod.rb	/^    def league_name=(n)$/;"	f	class:GameStore.TeamMod
+league_name=	/code/orig/game_store/lib/game_store/team_mod.rb	/^    def league_name=(n)$/;"	f	class:GameStore.TeamMod
+line	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def line$/;"	f	class:SeasonProp
+lines	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/game_props.rb	/^    def lines$/;"	f	class:QuebecLottery.GameProps
+lines	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/prop.rb	/^    def lines$/;"	f	class:QuebecLottery
+lines=	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/prop_line.rb	/^    def lines=(arr)$/;"	f	class:QuebecLottery.PropLine
+load!	/code/orig/baseball/lib/baseball.rb	/^    def load!$/;"	f	class:Baseball
+load!	/code/orig/baseball_lottery/lib/baseball_lottery.rb	/^    def load!$/;"	f	class:BaseballLottery
+load!	/code/orig/baseball_projection/lib/baseball_projection.rb	/^    def load!$/;"	f	class:BaseballProjection
+load!	/code/orig/bet_store/lib/bet_store.rb	/^    def load!$/;"	f	class:BetStore
+load!	/code/orig/espn_scores/lib/espn_scores.rb	/^    def load!$/;"	f	class:EspnScores
+load!	/code/orig/game_store/app/models/game_store/game_create.rb	/^    def load!$/;"	f	class:GameStore.GameDay
+load!	/code/orig/game_store/lib/game_store.rb	/^    def load!$/;"	f	class:GameStore
+load!	/code/orig/game_store/lib/game_store/game_create.rb	/^    def load!$/;"	f	class:GameStore.GameDay
+load!	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^    def load!$/;"	f	class:MongoidGemConfig
+load!	/code/orig/quebec_lottery/gem/lib/quebec_lottery.rb	/^    def load!$/;"	f	class:QuebecLottery
+load!	/code/orig/sim_back/lib/sim_back.rb	/^    def load!$/;"	f	class:SimBack
+load_file	/code/orig/baseball_projection/lib/baseball_projection/single_projection.rb	/^    def load_file(file,type,accum)$/;"	f	class:Projections
+load_sample_games!	/code/orig/game_store/lib/game_store/util.rb	/^    def load_sample_games!$/;"	f	class:GameStore
+load_seasons!	/code/orig/game_store/lib/game_store/util.rb	/^    def load_seasons!$/;"	f	class:GameStore
+load_teams!	/code/orig/game_store/lib/game_store/util.rb	/^    def load_teams!$/;"	f	class:GameStore
+loaded?	/code/orig/game_store/app/models/game_store/game_create.rb	/^    def loaded?$/;"	f	class:GameStore.GameDay
+loaded?	/code/orig/game_store/lib/game_store/game_create.rb	/^    def loaded?$/;"	f	class:GameStore.GameDay
+log_make_summary	/code/orig/sim_back/lib/sim_back/summary_worker.rb	/^      def log_make_summary(*args)$/;"	f	class:SimBack.IntermediateSummaryWorker
+log_odds	/code/orig/odds/lib/odds/odds.rb	/^    def log_odds$/;"	f	class:Odds
+log_p1	/code/orig/odds/lib/odds/algorithms/parlay_utility.rb	/^      def log_p1(num)$/;"	f	class:Odds.Algorithms.ParlayUtility.log_utility_for_scenario
+log_utility_for_scenario	/code/orig/odds/lib/odds/algorithms/parlay_utility.rb	/^      def log_utility_for_scenario(scenario)$/;"	f	class:Odds.Algorithms.ParlayUtility
+log_utility_of_perc	/code/orig/odds/lib/odds/algorithms/kelly.rb	/^      def log_utility_of_perc(perc)$/;"	f	class:Odds.Algorithms.Kelly
+logger	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^  def logger$/;"	f	class:GeneticAlgorithm
+loss_chance	/code/orig/odds/lib/odds/bet.rb	/^    def loss_chance$/;"	f	class:Odds.Bet
+loss_chance	/code/orig/odds/lib/odds/odds.rb	/^    def loss_chance$/;"	f	class:Odds.Odds
+make	/code/orig/baseball_projection/lib/baseball_projection/composite_projection.rb	/^      def make(singles)$/;"	f	class:BaseballProjection.CompositeProjection
+make	/code/orig/sim_back/vol/fork_test.rb	/^    def make(ops={})$/;"	f	class:CaptureOut
+make_from_real	/code/orig/baseball/lib/baseball/player.rb	/^      def make_from_real(first,last,year)$/;"	f	class:Baseball.Player
+make_one	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^      def make_one(ops)$/;"	f	class:BaseballProjection.SavedProjection
+make_question	/code/orig/bet_store/spec/question/over_under_spec.rb	/^      def make_question(ops={})$/;"	f
+make_rand	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^    def make_rand$/;"	f	class:ParlayPercs
+make_response	/code/orig/espn_scores/lib/espn_scores/web.rb	/^      def make_response$/;"	f	class:EspnScores.Web
+make_saves	/code/orig/quebec_lottery/gem/vol/remote_test.rb	/^def make_saves(games)$/;"	f
+make_single_bets	/code/orig/odds/vol/parlays_as_horses.rb	/^def make_single_bets$/;"	f
+make_summary	/code/orig/baseball_lottery/lib/baseball_lottery/simback_setup.rb	/^    def make_summary(progress)$/;"	f	class:SimBack.SummaryWorker
+make_summary	/code/orig/sim_back/lib/sim_back/summary_worker.rb	/^    def make_summary(*args)$/;"	f	class:SimBack.IntermediateSummaryWorker
+make_summary	/code/orig/sim_back/lib/sim_back/summary_worker.rb	/^    def make_summary(progress)$/;"	f	class:SimBack.SummaryWorker
+make_summary	/code/orig/sim_back/spec/support_ext/basic_imp.rb	/^    def make_summary(*args)$/;"	f	class:SimBack.IntermediateSummaryWorker
+make_summary	/code/orig/sim_back/spec/support_ext/basic_imp.rb	/^    def make_summary(progress)$/;"	f	class:SimBack.SummaryWorker
+map_centered_on_sum	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^  def map_centered_on_sum(target_sum)$/;"	f	class:Array
+map_centered_on_sum	/code/orig/odds/lib/odds/ext/map_special.rb	/^  def map_centered_on_sum(target_sum)$/;"	f	class:Array
+map_restrict_to_range	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^  def map_restrict_to_range(r)$/;"	f	class:Array
+map_restrict_to_range	/code/orig/odds/lib/odds/ext/map_special.rb	/^  def map_restrict_to_range(r)$/;"	f	class:Array
+max_chunk_size	/code/orig/sim_back/lib/sim_back/queue.rb	/^      def max_chunk_size$/;"	f	class:SimBack.Queue
+merge_into	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^  def merge_into(config,accum)$/;"	f	class:CompositeMongoConfig
+method_missing	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^  def method_missing(sym,*args,&b)$/;"	f	class:MyLogger
+method_missing	/code/orig/quebec_lottery/gem/lib/quebec_lottery/pages.rb	/^      def method_missing(sym,*args,&b)$/;"	f	class:QuebecLottery.Pages
+mod_line	/code/orig/bet_store/app/models/bet_store/matched_sides.rb	/^    def mod_line(side)$/;"	f	class:BetStore.MatchedSides
+mod_line	/code/orig/bet_store/lib/bet_store/matched_sides.rb	/^    def mod_line(side)$/;"	f	class:BetStore.MatchedSides
+mongoize	/code/orig/bet_store/lib/bet_store/ext/odds_ext.rb	/^      def mongoize(object)$/;"	f	class:Odds.Odds
+mongoize_old	/code/orig/bet_store/lib/bet_store/ext/odds_ext.rb	/^    def mongoize_old$/;"	f	class:Odds.Odds
+mutate	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^  def mutate$/;"	f	class:ParlayPercs
+mutate_one	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^  def mutate_one$/;"	f	class:ParlayPercs
+my_class_name	/code/orig/mongoid_gem_config/lib/mongoid_gem_config/rich_field.rb	/^      def my_class_name(name)$/;"	f	class:MongoidGemConfig.RichField.ClassMethods
+my_module_name	/code/orig/mongoid_gem_config/lib/mongoid_gem_config/rich_field.rb	/^      def my_module_name$/;"	f	class:MongoidGemConfig.RichField.ClassMethods
+name	/code/orig/baseball_projection/lib/baseball_projection/composite_projection.rb	/^    def name$/;"	f	class:BaseballProjection.CompositeProjection
+name	/code/orig/baseball_projection/lib/baseball_projection/stat.rb	/^    def name$/;"	f	class:BaseballProjection.Stat
+name=	/code/orig/baseball_projection/lib/baseball_projection/stat.rb	/^    def name=(x)$/;"	f	class:BaseballProjection.Stat
+needed_zeroes	/code/orig/baseball_projection/lib/baseball_projection/pa_estimate.rb	/^    def needed_zeroes$/;"	f	class:BaseballProjection.PaEstimate
+new	/code/orig/baseball_lottery/lib/baseball_lottery/season_props.rb	/^      def new(ops)$/;"	f	class:BaseballLottery.SeasonProp
+new	/code/orig/odds/lib/odds/algorithms/correlated_kelly.rb	/^      def self.new(*args)$/;"	F	class:Odds.Algorithms.CorrelatedKelly
+new_sim	/code/orig/odds/vol/parlays_as_horses.rb	/^  def new_sim$/;"	f	class:Sims
+num_wins	/code/orig/baseball_lottery/lib/baseball_lottery/sims.rb	/^    def num_wins(comb)$/;"	f	class:BaseballLottery.TruthHash
+num_wins_for_bets	/code/orig/baseball_lottery/lib/baseball_lottery/sims.rb	/^    def num_wins_for_bets(bets)$/;"	f	class:BaseballLottery
+obj_for_date	/code/orig/espn_scores/lib/espn_scores/week.rb	/^      def obj_for_date(ops)$/;"	f	class:EspnScores.Week
+obj_for_week	/code/orig/espn_scores/lib/espn_scores/week.rb	/^      def obj_for_week(ops)$/;"	f	class:EspnScores.Week
+obp	/code/orig/baseball_projection/lib/baseball_projection/calced_stats_mod.rb	/^    def obp$/;"	f	class:BaseballProjection.CalcedStatsMod
+odds	/code/orig/odds/lib/odds/odds.rb	/^    def odds$/;"	f	class:Odds
+odds	/code/orig/odds/spec/odds_spec.rb	/^  def odds(win_chance)$/;"	f
+odds	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/prop_line.rb	/^    def odds$/;"	f	class:QuebecLottery.PropLine
+odds	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def odds$/;"	f	class:SeasonProp
+odds=	/code/orig/odds/lib/odds/bet.rb	/^    def odds=(o)$/;"	f	class:Odds.Bet
+odds_obj	/code/orig/bet_store/app/models/bet_store/side.rb	/^      def odds_obj$/;"	f	class:BetStore.Side.Base
+odds_obj	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^      def odds_obj$/;"	f	class:BetStore.Side.Base
+odds_obj	/code/orig/bet_store/lib/bet_store/side.rb	/^      def odds_obj$/;"	f	class:BetStore.Side.Base
+odds_sum	/code/orig/odds/lib/odds/lines.rb	/^    def odds_sum$/;"	f	class:Odds.Lines
+odds_with_vig	/code/orig/baseball_lottery/vol/with_vig.rb	/^def odds_with_vig(win_chance,target_vig)$/;"	f
+oddsv	/code/orig/baseball_lottery/spec/support/bets.rb	/^  def oddsv(win_chance,which)$/;"	f
+oddsv	/code/orig/baseball_lottery/vol/intermediate_test.rb	/^def oddsv(win_chance,which)$/;"	f
+opposites	/code/orig/bet_store/app/models/bet_store/side.rb	/^      def opposites$/;"	f	class:BetStore.Side.Base.Const
+opposites	/code/orig/bet_store/app/models/bet_store/side.rb	/^      def opposites$/;"	f	class:BetStore.Side.Base.Team
+opposites	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^      def opposites$/;"	f	class:BetStore.Side.Base.Const
+opposites	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^      def opposites$/;"	f	class:BetStore.Side.Base.Team
+opposites	/code/orig/bet_store/lib/bet_store/side.rb	/^      def opposites$/;"	f	class:BetStore.Side.Base.Const
+opposites	/code/orig/bet_store/lib/bet_store/side.rb	/^      def opposites$/;"	f	class:BetStore.Side.Base.Team
+ops	/code/orig/baseball_projection/lib/baseball_projection/calced_stats_mod.rb	/^    def ops$/;"	f	class:BaseballProjection.CalcedStatsMod
+optimal_bet_perc	/code/orig/odds/lib/odds/algorithms/correlated_kelly.rb	/^        def optimal_bet_perc(bet)$/;"	f	class:Odds.Algorithms.CorrelatedKelly.Calc
+other_sides	/code/orig/bet_store/app/models/bet_store/side.rb	/^      def other_sides$/;"	f	class:BetStore.Side.Base
+other_sides	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^      def other_sides$/;"	f	class:BetStore.Side.Base
+other_sides	/code/orig/bet_store/lib/bet_store/side.rb	/^      def other_sides$/;"	f	class:BetStore.Side.Base
+other_team	/code/orig/bet_store/app/models/bet_store/side.rb	/^      def other_team$/;"	f	class:BetStore.Side.Base.Team
+other_team	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^      def other_team$/;"	f	class:BetStore.Side.Base.Team
+other_team	/code/orig/bet_store/lib/bet_store/side.rb	/^      def other_team$/;"	f	class:BetStore.Side.Base.Team
+ou_type	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def ou_type$/;"	f	class:SeasonProp
+over_odds=	/code/orig/baseball_lottery/lib/baseball_lottery/stat_bet.rb	/^    def over_odds=(x)$/;"	f	class:BaseballLottery.StatBet
+over_under	/code/orig/bet_store/lib/bet_store/question_api.rb	/^      def over_under(ops)$/;"	f	class:BetStore.QuestionApi
+overround	/code/orig/odds/lib/odds/lines.rb	/^    def overround$/;"	f	class:Odds.Lines
+pa	/code/orig/baseball_projection/lib/baseball_projection/true_talent.rb	/^    def pa$/;"	f	class:BaseballProjection.TrueTalent
+parlay_for_bet_string	/code/orig/odds/vol/parlays_as_horses.rb	/^  def parlay_for_bet_string(bet_string)$/;"	f	class:Sims
+perc	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^    def perc(ops)$/;"	f	class:BaseballProjection.EnsuredWhere
+perc_gt	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^    def perc_gt(ops)$/;"	f	class:BaseballProjection.EnsuredWhere
+perc_lt	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^    def perc_lt(ops)$/;"	f	class:BaseballProjection.EnsuredWhere
+perc_win	/code/orig/baseball_lottery/lib/baseball_lottery/season_props.rb	/^      def perc_win$/;"	f	class:BaseballLottery.SeasonProp.OverUnder
+perc_win	/code/orig/baseball_lottery/lib/baseball_lottery/season_props.rb	/^      def perc_win$/;"	f	class:BaseballLottery.SeasonProp.Vs
+percentile	/code/orig/baseball_projection/lib/baseball_projection/samples.rb	/^    def percentile(perc)$/;"	f	class:BaseballProjection.Samples
+percentile_index	/code/orig/baseball_projection/lib/baseball_projection/samples.rb	/^    def percentile_index(perc)$/;"	f	class:BaseballProjection.Samples
+perform	/code/orig/sim_back/lib/sim_back/consolidate_worker.rb	/^    def perform(sim_progress_id)$/;"	f	class:SimBack.ConsolidateWorker
+perform	/code/orig/sim_back/lib/sim_back/summary_worker.rb	/^    def perform(sim_progress_id)$/;"	f	class:SimBack.SummaryWorker
+perform	/code/orig/sim_back/lib/sim_back/summary_worker.rb	/^    def perform(sim_progress_id,target_sims)$/;"	f	class:SimBack.IntermediateSummaryWorker
+perform	/code/orig/sim_back/lib/sim_back/worker.rb	/^    def perform(sim_progress_id,num_sims)$/;"	f	class:Worker
+pitching?	/code/orig/bet_store/app/models/bet_store/question.rb	/^      def pitching?$/;"	f	class:BetStore.Question.Base
+pitching?	/code/orig/bet_store/junk/app/models/bet_store/question.rb	/^      def pitching?$/;"	f	class:BetStore.Question.Base
+pitching?	/code/orig/bet_store/lib/bet_store/question.rb	/^      def pitching?$/;"	f	class:BetStore.Question.Base
+play	/code/orig/baseball/lib/baseball/game.rb	/^    def play$/;"	f	class:Baseball.Game
+play_batter	/code/orig/baseball/lib/baseball/game.rb	/^    def play_batter$/;"	f	class:Baseball.Game
+play_inning	/code/orig/baseball/lib/baseball/game.rb	/^    def play_inning$/;"	f	class:Baseball.Game
+player	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def player$/;"	f	class:SeasonProp
+player_id	/code/orig/baseball_projection/lib/baseball_projection/composite_projection.rb	/^    def player_id$/;"	f	class:BaseballProjection.CompositeProjection
+population	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^  def population$/;"	f	class:GeneticAlgorithm
+potential_profit	/code/orig/odds/lib/odds/bet.rb	/^    def potential_profit$/;"	f	class:Odds.Bet
+prediction_number	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def prediction_number$/;"	f	class:SeasonProp
+present?	/code/orig/quebec_lottery/gem/lib/quebec_lottery.rb	/^  def present?$/;"	f	class:Object
+print_one	/code/orig/baseball_projection/spec/baseball_projection_spec.rb	/^  def print_one(r)$/;"	f
+proj_fields	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^      def proj_fields$/;"	f	class:BaseballProjection.SavedProjection
+prop	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/save_prop.rb	/^    def prop; props.first; end$/;"	f	class:QuebecLottery.SaveProp
+prop	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def prop$/;"	f	class:SeasonProp
+question	/code/orig/bet_store/app/models/bet_store/matched_sides.rb	/^    def question$/;"	f	class:BetStore.MatchedSides
+question	/code/orig/bet_store/lib/bet_store/matched_sides.rb	/^    def question$/;"	f	class:BetStore.MatchedSides
+question_props	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def question_props$/;"	f	class:SeasonProp
+queue	/code/orig/sim_back/lib/sim_back/queue.rb	/^      def queue(num_sims, sim_progress_ops)$/;"	f	class:SimBack.Queue
+rand_el	/code/orig/baseball_projection/lib/baseball_projection.rb	/^  def rand_el$/;"	f	class:Array
+rand_el	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^  def rand_el$/;"	f	class:Array
+rand_el	/code/orig/odds/lib/odds/ext/rand.rb	/^  def rand_el$/;"	f	class:Array
+rand_num	/code/orig/odds/lib/odds/ext/rand.rb	/^  def rand_num$/;"	f	class:Range
+rand_sq_num	/code/orig/odds/lib/odds/ext/rand.rb	/^  def rand_sq_num$/;"	f	class:Range
+rand_sqrt_num	/code/orig/odds/lib/odds/ext/rand.rb	/^  def rand_sqrt_num$/;"	f	class:Range
+random	/code/orig/baseball_projection/spec/baseball_projection_spec.rb	/^  def random$/;"	f
+read_from_file	/code/orig/sim_back/vol/fork_test.rb	/^  def read_from_file$/;"	f	class:CaptureOut
+recombine	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^  def recombine(other)$/;"	f	class:ParlayPercs
+register_gems	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^    def register_gems(*gems)$/;"	f	class:MongoidGemConfig
+register_sport	/code/orig/espn_scores/lib/espn_scores/day.rb	/^      def register_sport(*names)$/;"	f	class:EspnScores.Day
+replace_stderr!	/code/orig/sim_back/vol/fork_test.rb	/^  def replace_stderr!$/;"	f	class:CaptureOut
+replace_stdout!	/code/orig/sim_back/vol/fork_test.rb	/^  def replace_stdout!$/;"	f	class:CaptureOut
+reschedule	/code/orig/baseball_lottery/spec/support_ext/summary_worker_reschedule.rb	/^    def reschedule(*args)$/;"	f	class:SimBack.IntermediateSummaryWorker
+reschedule	/code/orig/baseball_lottery/spec/support_ext/summary_worker_reschedule.rb	/^    def reschedule(*args)$/;"	f	class:SimBack.SummaryWorker
+reschedule	/code/orig/sim_back/lib/sim_back/consolidate_worker.rb	/^    def reschedule(*args)$/;"	f	class:SimBack.ConsolidateWorker
+reschedule	/code/orig/sim_back/lib/sim_back/summary_worker.rb	/^    def reschedule(*args)$/;"	f	class:SimBack.SummaryMod
+reschedule	/code/orig/sim_back/spec/support_ext/summary_worker_reschedule.rb	/^    def reschedule(*args)$/;"	f	class:SimBack.SummaryWorker
+rich_field	/code/orig/bet_store/junk/app/models/bet_store/richer_field.rb	/^      def rich_field(name,ops={})$/;"	f	class:BetStore.RicherField.ClassMethods
+root	/code/orig/baseball/lib/baseball.rb	/^    def root$/;"	f	class:Baseball
+root	/code/orig/baseball_lottery/lib/baseball_lottery.rb	/^    def root$/;"	f	class:BaseballLottery
+root	/code/orig/baseball_projection/lib/baseball_projection.rb	/^    def root$/;"	f	class:BaseballProjection
+root	/code/orig/bet_store/lib/bet_store.rb	/^    def root$/;"	f	class:BetStore
+root	/code/orig/espn_scores/lib/espn_scores.rb	/^    def root$/;"	f	class:EspnScores
+root	/code/orig/game_store/lib/game_store.rb	/^    def root$/;"	f	class:GameStore
+root	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^    def root$/;"	f	class:MongoidGemConfig
+root	/code/orig/quebec_lottery/gem/lib/quebec_lottery.rb	/^    def root$/;"	f	class:QuebecLottery
+root	/code/orig/sim_back/lib/sim_back.rb	/^    def root$/;"	f	class:SimBack
+root_for	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^  def root_for(g)$/;"	f	class:CompositeMongoConfig
+row=	/code/orig/baseball_projection/lib/baseball_projection/single_projection.rb	/^    def row=(row)$/;"	f	class:BaseballProjection.SingleProjection
+rpad	/code/orig/baseball_projection/lib/baseball_projection.rb	/^  def rpad(num,char)$/;"	f	class:Float
+run!	/code/orig/baseball_lottery/lib/baseball_lottery/simback_setup.rb	/^    def run!$/;"	f	class:SimBack.Sim
+run!	/code/orig/baseball_lottery/lib/baseball_lottery/simback_setup.rb	/^    def run!$/;"	f	class:SimBack.SummaryObj
+run!	/code/orig/odds/lib/odds/algorithms/correlated_kelly.rb	/^        def run!$/;"	f	class:Odds.Algorithms.CorrelatedKelly.Calc
+run!	/code/orig/sim_back/lib/sim_back/sim.rb	/^    def run!$/;"	f	class:SimBack.Sim
+run!	/code/orig/sim_back/lib/sim_back/sims.rb	/^    def run!$/;"	f	class:SimBack.Sims
+run!	/code/orig/sim_back/spec/support/fake_runner.rb	/^  def run!$/;"	f	class:FakeRunner
+run!	/code/orig/sim_back/spec/support_ext/basic_imp.rb	/^    def run!$/;"	f	class:SimBack.Sim
+run_genetic	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^def run_genetic$/;"	f	class:Array
+run_once!	/code/orig/sim_back/spec/support/fake_runner.rb	/^  def run_once!$/;"	f	class:FakeRunner
+run_prof	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^def run_prof$/;"	f	class:Array
+run_state	/code/orig/sim_back/lib/sim_back/sim_progress.rb	/^    def run_state$/;"	f	class:SimBack.SimProgress
+sample_dir	/code/orig/quebec_lottery/gem/spec/support/samples.rb	/^    def sample_dir$/;"	f	class:QuebecLottery
+save!	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/load.rb	/^    def save!$/;"	f	class:QuebecLottery.SaveGameProp
+save!	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/save_prop.rb	/^    def save!$/;"	f	class:QuebecLottery.SaveProp
+save_over_under!	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/save_prop.rb	/^    def save_over_under!$/;"	f	class:QuebecLottery.SaveProp
+save_player_one_goal!	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/load.rb	/^    def save_player_one_goal!$/;"	f	class:QuebecLottery.SaveGameProp
+save_player_vs!	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/load.rb	/^    def save_player_vs!$/;"	f	class:QuebecLottery.SaveGameProp
+save_spread!	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/load.rb	/^    def save_spread!$/;"	f	class:QuebecLottery.SaveGameProp
+save_total!	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/load.rb	/^    def save_total!$/;"	f	class:QuebecLottery.SaveGameProp
+save_vs!	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/save_prop.rb	/^    def save_vs!$/;"	f	class:QuebecLottery.SaveProp
+score_selector	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^    def score_selector$/;"	f	class:EspnScores.BaseballGame
+score_selector	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^    def score_selector$/;"	f	class:EspnScores.BasketballGame
+score_selector	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^    def score_selector$/;"	f	class:EspnScores.FootballGame
+score_selector	/code/orig/espn_scores/lib/espn_scores/game_types.rb	/^    def score_selector$/;"	f	class:EspnScores.HockeyGame
+scorebox_class	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^    def scorebox_class$/;"	f	class:EspnScores.BaseballDay
+scorebox_class	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^    def scorebox_class$/;"	f	class:EspnScores.BasketballDay
+scorebox_class	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^    def scorebox_class$/;"	f	class:EspnScores.CollegeFootballDay
+scorebox_class	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^    def scorebox_class$/;"	f	class:EspnScores.FootballDay
+scorebox_class	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^    def scorebox_class$/;"	f	class:EspnScores.HockeyDay
+sd	/code/orig/baseball_projection/lib/baseball_projection/true_talent.rb	/^    def sd$/;"	f	class:BaseballProjection.TrueTalent
+season_perc	/code/orig/baseball_lottery/lib/baseball_lottery/season_props.rb	/^      def season_perc(season)$/;"	f	class:BaseballLottery.SeasonProp.Vs
+season_stat_over_under	/code/orig/bet_store/lib/bet_store/question_api.rb	/^      def season_stat_over_under(ops)$/;"	f	class:BetStore.QuestionApi
+season_stat_vs	/code/orig/bet_store/lib/bet_store/question_api.rb	/^      def season_stat_vs(ops)$/;"	f	class:BetStore.QuestionApi
+seconds_till_update	/code/orig/espn_scores/lib/espn_scores/date_parse.rb	/^    def seconds_till_update(now=Time.now)$/;"	f	class:EspnScores.DateParse
+selected_set_rate	/code/orig/odds/lib/odds/algorithms/correlated_kelly.rb	/^        def selected_set_rate$/;"	f	class:Odds.Algorithms.CorrelatedKelly.Calc
+set_expected_win_chance!	/code/orig/baseball_lottery/lib/baseball_lottery/tasks.rb	/^    def set_expected_win_chance!$/;"	f	class:BaseballLottery
+set_field	/code/orig/baseball_projection/lib/baseball_projection/single_projection.rb	/^    def set_field(k,v)$/;"	f	class:BaseballProjection.SingleProjection
+set_first_week	/code/orig/espn_scores/lib/espn_scores/week.rb	/^      def set_first_week(sport,year,start_date)$/;"	f	class:EspnScores.Week
+set_full_name!	/code/orig/game_store/app/models/game_store/team_mod.rb	/^    def set_full_name!$/;"	f	class:GameStore.TeamMod
+set_full_name!	/code/orig/game_store/lib/game_store/team_mod.rb	/^    def set_full_name!$/;"	f	class:GameStore.TeamMod
+set_game_date!	/code/orig/game_store/app/models/game_store/game_mod.rb	/^    def set_game_date!$/;"	f	class:GameStore.GameMod
+set_game_date!	/code/orig/game_store/lib/game_store/game_mod.rb	/^    def set_game_date!$/;"	f	class:GameStore.GameMod
+set_origin	/code/orig/espn_scores/lib/espn_scores/web.rb	/^      def set_origin$/;"	f	class:EspnScores.Web
+set_rate	/code/orig/odds/lib/odds/algorithms/correlated_kelly.rb	/^        def set_rate$/;"	f	class:Odds.Algorithms.CorrelatedKelly.Calc
+set_win_chances!	/code/orig/baseball_lottery/lib/baseball_lottery/sims.rb	/^    def set_win_chances!$/;"	f	class:Sims
+setup!	/code/orig/sim_back/lib/sim_back/worker.rb	/^    def setup!$/;"	f	class:SimBack
+setup_logger!	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^    def setup_logger!$/;"	f	class:MongoidGemConfig
+should_have_to_s	/code/orig/odds/spec/odds_spec.rb	/^  def self.should_have_to_s(win_chance,exp)$/;"	F
+side	/code/orig/quebec_lottery/gem/spec/game/hockey_game_spec.rb	/^      def side(player)$/;"	f
+side_ident	/code/orig/bet_store/app/models/bet_store/side.rb	/^      def side_ident$/;"	f	class:BetStore.Side.Base.Const
+side_ident	/code/orig/bet_store/app/models/bet_store/side.rb	/^      def side_ident$/;"	f	class:BetStore.Side.Base.Player
+side_ident	/code/orig/bet_store/app/models/bet_store/side.rb	/^      def side_ident$/;"	f	class:BetStore.Side.Base.Team
+side_ident	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^      def side_ident$/;"	f	class:BetStore.Side.Base.Const
+side_ident	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^      def side_ident$/;"	f	class:BetStore.Side.Base.Player
+side_ident	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^      def side_ident$/;"	f	class:BetStore.Side.Base.Team
+side_ident	/code/orig/bet_store/lib/bet_store/side.rb	/^      def side_ident$/;"	f	class:BetStore.Side.Base.Const
+side_ident	/code/orig/bet_store/lib/bet_store/side.rb	/^      def side_ident$/;"	f	class:BetStore.Side.Base.Player
+side_ident	/code/orig/bet_store/lib/bet_store/side.rb	/^      def side_ident$/;"	f	class:BetStore.Side.Base.Team
+sim_progress	/code/orig/baseball_lottery/lib/baseball_lottery/sims.rb	/^    def sim_progress$/;"	f	class:BaseballLottery.TruthHash
+simmed_parlays	/code/orig/odds/vol/parlays_as_horses.rb	/^  def simmed_parlays$/;"	f	class:Sims
+sims	/code/orig/odds/vol/parlays_as_horses.rb	/^def sims$/;"	f
+simulated_change	/code/orig/odds/lib/odds/bet.rb	/^    def simulated_change$/;"	f	class:Odds.Bet
+single	/code/orig/baseball_projection/lib/baseball_projection/calced_stats_mod.rb	/^    def single$/;"	f	class:BaseballProjection.CalcedStatsMod
+single_bets	/code/orig/odds/vol/parlays_as_horses.rb	/^def single_bets$/;"	f
+size	/code/orig/baseball/lib/baseball/bases.rb	/^    def size$/;"	f	class:Baseball.Bases
+slg	/code/orig/baseball_projection/lib/baseball_projection/calced_stats_mod.rb	/^    def slg$/;"	f	class:BaseballProjection.CalcedStatsMod
+source	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/save_prop.rb	/^    def source$/;"	f	class:QuebecLottery.SaveProp
+sox_2013_players	/code/orig/baseball/lib/baseball/lineup.rb	/^      def sox_2013_players$/;"	f	class:Baseball.Lineup
+sport	/code/orig/espn_scores/lib/espn_scores/web.rb	/^      def sport$/;"	f	class:EspnScores.Web
+spread	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/prop_line.rb	/^    def spread$/;"	f	class:QuebecLottery.PropLine
+start_of_day	/code/orig/espn_scores/lib/espn_scores.rb	/^  def start_of_day$/;"	f	class:Date
+stat	/code/orig/bet_store/app/models/bet_store/question.rb	/^      def stat; unit; end$/;"	f	class:BetStore.Question.OverUnder
+stat	/code/orig/bet_store/app/models/bet_store/question.rb	/^      def stat; unit; end$/;"	f	class:BetStore.Question.Vs
+stat	/code/orig/bet_store/junk/app/models/bet_store/question.rb	/^      def stat; unit; end$/;"	f	class:BetStore.Question.OverUnder
+stat	/code/orig/bet_store/junk/app/models/bet_store/question.rb	/^      def stat; unit; end$/;"	f	class:BetStore.Question.Vs
+stat	/code/orig/bet_store/lib/bet_store/question.rb	/^      def stat; unit; end$/;"	f	class:BetStore.Question.OverUnder
+stat	/code/orig/bet_store/lib/bet_store/question.rb	/^      def stat; unit; end$/;"	f	class:BetStore.Question.Vs
+stat	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def stat$/;"	f	class:SeasonProp
+stats_to_randomize	/code/orig/baseball_projection/lib/baseball_projection/stat.rb	/^      def stats_to_randomize$/;"	f	class:BaseballProjection.Stat
+stuff	/code/orig/odds/vol/parlays_as_horses.rb	/^def stuff$/;"	f
+stuff	/code/orig/sim_back/vol/fork_test.rb	/^def stuff$/;"	f
+stuff1	/code/orig/sim_back/vol/fork_test.rb	/^def stuff1$/;"	f
+subclass_counts	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^  def subclass_counts$/;"	f	class:Object
+sum	/code/orig/baseball_projection/lib/baseball_projection.rb	/^  def sum$/;"	f	class:Array
+sum	/code/orig/odds/lib/odds/ext/math.rb	/^  def sum$/;"	f	class:Array
+summed	/code/orig/sim_back/spec/support_ext/basic_imp.rb	/^      def summed(progress)$/;"	f	class:SimBack.NumberObj
+tb	/code/orig/baseball_projection/lib/baseball_projection/calced_stats_mod.rb	/^    def tb$/;"	f	class:BaseballProjection.CalcedStatsMod
+team	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/prop_line.rb	/^    def team$/;"	f	class:QuebecLottery.PropLine
+team_prop?	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def team_prop?$/;"	f	class:SeasonProp
+team_type	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/load.rb	/^    def team_type(str)$/;"	f	class:QuebecLottery.SaveGameProp
+times_product	/code/orig/odds/lib/odds/ext/math.rb	/^  def times_product$/;"	f	class:Array
+tm	/code/orig/baseball_lottery/lib/baseball_lottery.rb	/^def tm(name)$/;"	f
+to_csv	/code/orig/espn_scores/lib/espn_scores/day.rb	/^    def to_csv$/;"	f	class:EspnScores.Day
+to_expanded_query_syntax	/code/orig/baseball_projection/lib/baseball_projection/ext.rb	/^  def to_expanded_query_syntax$/;"	f	class:Hash
+to_f_safe	/code/orig/quebec_lottery/gem/lib/quebec_lottery.rb	/^  def to_f_safe$/;"	f	class:String
+to_fair	/code/orig/odds/lib/odds/lines.rb	/^    def to_fair$/;"	f	class:Odds.Lines
+to_if	/code/orig/odds/lib/odds/ext/numeric.rb	/^  def to_if$/;"	f	class:Numeric
+to_json	/code/orig/espn_scores/lib/espn_scores/day.rb	/^    def to_json(*args)$/;"	f	class:EspnScores.Day
+to_json	/code/orig/espn_scores/lib/espn_scores/game.rb	/^    def to_json(*args)$/;"	f	class:EspnScores.Game
+to_name	/code/orig/bet_store/junk/deps.rb	/^  def to_name$/;"	f	class:Array
+to_name	/code/orig/bet_store/junk/deps.rb	/^  def to_name$/;"	f	class:Hash
+to_name	/code/orig/bet_store/junk/deps.rb	/^  def to_name$/;"	f	class:Object
+to_next	/code/orig/espn_scores/lib/espn_scores/week.rb	/^    def to_next$/;"	f	class:EspnScores.Week
+to_odds	/code/orig/odds/lib/odds/ext/to_odds.rb	/^  def to_odds$/;"	f	class:String
+to_over_bet	/code/orig/baseball_lottery/lib/baseball_lottery/stat_bet.rb	/^    def to_over_bet$/;"	f	class:BaseballLottery.StatBet
+to_player	/code/orig/baseball_projection/lib/baseball_projection/composite_projection.rb	/^    def to_player$/;"	f	class:BaseballProjection.CompositeProjection
+to_player	/code/orig/baseball_projection/lib/baseball_projection/single_projection.rb	/^    def to_player$/;"	f	class:BaseballProjection.SingleProjection
+to_s	/code/orig/baseball_lottery/lib/baseball_lottery/sims.rb	/^    def to_s$/;"	f
+to_s	/code/orig/baseball_lottery/lib/baseball_lottery/stat_bet.rb	/^    def to_s$/;"	f	class:BaseballLottery.StatBet
+to_s	/code/orig/baseball_projection/lib/baseball_projection/composite_projection.rb	/^    def to_s$/;"	f	class:BaseballProjection.CompositeProjection
+to_s	/code/orig/baseball_projection/lib/baseball_projection/randomized_projection.rb	/^    def to_s$/;"	f	class:BaseballProjection.RandomizedProjection
+to_s	/code/orig/baseball_projection/lib/baseball_projection/samples.rb	/^    def to_s(*percs)$/;"	f	class:BaseballProjection.Samples
+to_s	/code/orig/baseball_projection/lib/baseball_projection/single_projection.rb	/^    def to_s$/;"	f	class:BaseballProjection.SingleProjection
+to_s	/code/orig/bet_store/app/models/bet_store/side.rb	/^      def to_s$/;"	f	class:BetStore.Side.Base
+to_s	/code/orig/bet_store/junk/app/models/bet_store/side.rb	/^      def to_s$/;"	f	class:BetStore.Side.Base
+to_s	/code/orig/bet_store/lib/bet_store/side.rb	/^      def to_s$/;"	f	class:BetStore.Side.Base
+to_s	/code/orig/espn_scores/lib/espn_scores/game.rb	/^    def to_s$/;"	f	class:EspnScores.Game
+to_s	/code/orig/espn_scores/lib/espn_scores/week.rb	/^    def to_s$/;"	f	class:EspnScores.Week
+to_s	/code/orig/odds/lib/odds/algorithms/correlated_kelly.rb	/^        def to_s$/;"	f	class:Odds.Algorithms.CorrelatedKelly.Calc
+to_s	/code/orig/odds/lib/odds/bet.rb	/^    def to_s$/;"	f	class:Odds.Bet
+to_s	/code/orig/odds/lib/odds/lines.rb	/^    def to_s$/;"	f	class:Odds.Lines
+to_s	/code/orig/odds/lib/odds/odds.rb	/^    def to_s$/;"	f	class:Odds.Odds
+to_s	/code/orig/odds/lib/odds/parlay.rb	/^    def to_s$/;"	f	class:Odds.Parlay
+to_s	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/prop.rb	/^    def to_s$/;"	f	class:QuebecLottery
+to_s	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/prop_line.rb	/^    def to_s$/;"	f	class:QuebecLottery.PropLine
+to_s	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def to_s$/;"	f	class:SeasonProp
+to_s	/code/orig/sim_back/spec/support/fake_runner.rb	/^  def to_s$/;"	f	class:FakeRunner
+to_s_bankroll_percs	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^  def to_s_bankroll_percs$/;"	f	class:Array
+to_s_curr	/code/orig/odds/lib/odds/ext/string.rb	/^  def to_s_curr(digits=2)$/;"	f	class:Numeric
+to_s_fitness	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^  def to_s_fitness$/;"	f	class:ParlayPercs
+to_s_perc	/code/orig/odds/lib/odds/ext/string.rb	/^  def to_s_perc(digits=2)$/;"	f	class:Numeric
+to_s_to_one	/code/orig/odds/lib/odds/odds.rb	/^    def to_s_to_one$/;"	f	class:Odds.Odds
+to_under_bet	/code/orig/baseball_lottery/lib/baseball_lottery/stat_bet.rb	/^    def to_under_bet$/;"	f	class:BaseballLottery.StatBet
+to_vig	/code/orig/odds/lib/odds/lines.rb	/^    def to_vig(target_vig)$/;"	f	class:Odds.Lines
+to_win_chance	/code/orig/odds/lib/odds/lines.rb	/^    def to_win_chance(target_win_chance)$/;"	f	class:Odds.Lines
+tob	/code/orig/baseball_projection/lib/baseball_projection/calced_stats_mod.rb	/^    def tob$/;"	f	class:BaseballProjection.CalcedStatsMod
+top_combined	/code/orig/odds/lib/odds/algorithms/genetic.rb	/^  def top_combined(n)$/;"	f	class:GeneticAlgorithm
+total_spread	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/load.rb	/^    def total_spread(str)$/;"	f	class:QuebecLottery.SaveGameProp
+total_type	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/load.rb	/^    def total_type(str)$/;"	f	class:QuebecLottery.SaveGameProp
+type	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/prop.rb	/^    def type$/;"	f	class:QuebecLottery
+under_odds=	/code/orig/baseball_lottery/lib/baseball_lottery/stat_bet.rb	/^    def under_odds=(x)$/;"	f	class:BaseballLottery.StatBet
+url_date_str	/code/orig/espn_scores/lib/espn_scores/day.rb	/^    def url_date_str$/;"	f	class:EspnScores.Day
+uses_week?	/code/orig/espn_scores/lib/espn_scores/date_parse.rb	/^    def uses_week?$/;"	f	class:EspnScores.DateParse
+utility	/code/orig/odds/lib/odds/algorithms/parlay_utility.rb	/^      def utility$/;"	f	class:Odds.Algorithms.ParlayUtility.log_utility_for_scenario
+valid_parlay_bets?	/code/orig/baseball_lottery/lib/baseball_lottery/sims.rb	/^    def valid_parlay_bets?(candidate_bets)$/;"	f	class:Sims
+vig	/code/orig/odds/lib/odds/lines.rb	/^    def vig$/;"	f	class:Odds.Lines
+vs_prop?	/code/orig/quebec_lottery/gem/lib/quebec_lottery/season/season_props.rb	/^    def vs_prop?$/;"	f	class:SeasonProp
+vs_unit	/code/orig/quebec_lottery/gem/lib/quebec_lottery/game/load.rb	/^    def vs_unit$/;"	f	class:QuebecLottery.SaveGameProp
+warn	/code/orig/mongoid_gem_config/lib/mongoid_gem_config.rb	/^  def warn(*args)$/;"	f	class:MyLogger
+week	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^    def week$/;"	f	class:EspnScores.BaseFootballDay
+week_for_date	/code/orig/espn_scores/lib/espn_scores/week.rb	/^      def week_for_date(ops)$/;"	f	class:EspnScores.Week
+week_old	/code/orig/espn_scores/lib/espn_scores/day_types.rb	/^    def week_old$/;"	f	class:EspnScores.BaseFootballDay
+where	/code/orig/baseball_projection/lib/baseball_projection/saved_projection.rb	/^    def where(*args)$/;"	f	class:BaseballProjection.EnsuredWhere
+win_amount_with_principal	/code/orig/odds/lib/odds/bet.rb	/^    def win_amount_with_principal$/;"	f	class:Odds.Bet
+win_amount_with_principal	/code/orig/odds/lib/odds/odds.rb	/^    def win_amount_with_principal$/;"	f	class:Odds.Odds
+win_amount_without_principal	/code/orig/odds/lib/odds/bet.rb	/^    def win_amount_without_principal$/;"	f	class:Odds.Bet
+win_amount_without_principal	/code/orig/odds/lib/odds/odds.rb	/^    def win_amount_without_principal$/;"	f	class:Odds.Odds
+win_chance=	/code/orig/odds/lib/odds/odds.rb	/^    def win_chance=(w)$/;"	f	class:Odds.Odds
+winning_parlays	/code/orig/odds/lib/odds/special/combination_parlay.rb	/^    def winning_parlays(winning_bets)$/;"	f	class:Odds.CombinationParlay
+without_vig	/code/orig/odds/lib/odds/bet.rb	/^    def without_vig(vig)$/;"	f	class:Odds.Bet
+without_vig	/code/orig/odds/lib/odds/odds.rb	/^    def without_vig(vig)$/;"	f	class:Odds
+worker_classes	/code/orig/sim_back/lib/sim_back/util.rb	/^    def worker_classes$/;"	f	class:SimBack
+write	/code/orig/sim_back/vol/fork_test.rb	/^  def write(str)$/;"	f	class:CaptureOut
+write!	/code/orig/odds/vol/parlays_as_horses.rb	/^  def write!$/;"	f	class:Sims
+year	/code/orig/espn_scores/lib/espn_scores/web.rb	/^      def year$/;"	f	class:EspnScores.Web
