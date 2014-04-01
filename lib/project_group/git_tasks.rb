@@ -5,7 +5,7 @@ module ProjectGroup
     def repo; proj.repo; end
 
     def gemspec!
-      repo.cmd "bundle exec rake gemspec"
+      repo.cmd "gamble_exec rake gemspec"
       fix_gemspec!
     end
 
@@ -14,7 +14,7 @@ module ProjectGroup
     end
 
     def build_deps!
-      repo.cmd "bundle install && bundle exec rake gemspec"
+      repo.cmd "gamble_exec --bundlecmd install && gamble_exec rake gemspec"
       fix_gemspec!
     end
 

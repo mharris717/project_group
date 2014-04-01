@@ -8,7 +8,7 @@ require 'andand'
 module ProjectGroup
   class << self
     def ec(cmd)
-      `#{cmd}`
+      MharrisExt.ec cmd, silent: true
     end
   end
 end
@@ -41,14 +41,14 @@ module ProjectGroup
   end
 end
 
-def do_until_success(&b)
+def do_until_success(message=nil,&b)
   loop do
     begin
       res = b[]
       return res
     rescue => exp
       puts exp.message
-      puts "Enter to Continue:"
+      puts "#{message} Enter to Continue:"
       STDIN.gets
     end
   end
@@ -59,7 +59,7 @@ ProjectGroup.load!
 ProjectGroup.register_plugin("reach", use_group: true) do |proj,ops|
   cmd = ops[:remaining_args].join(" ")
   #RC.cmd "cd #{proj.path} && #{cmd}"
-  do_until_success do
+  do_until_success(proj.short_name) do
     proj.eci cmd
   end
 end
@@ -69,5 +69,16 @@ ProjectGroup.register_plugin("gt", use_group: true) do |proj,ops|
     proj.eci "gittower -s"
     puts "Enter to Continue:"
     STDIN.gets
+  end
+  proj.eci "git push origin master:master"
+end
+
+ProjectGroup.register_plugin("tasks", use_group: true) do |proj,ops|
+  #names = ops[:group].singles.map { |x| x.short_name } + ['define_task']
+  #local = names.join(",")
+  #cmd = "/code/orig/local_exec/bin/local_exec --addl mongoid_gem_config,define_task --local #{local} list_rake_tasks"
+  cmd = "gamble_exec list_rake_tasks"
+  proj.eci(cmd, silent: true).split("\n").each do |task|
+    puts "TASK #{proj.short_name}:#{task}"
   end
 end

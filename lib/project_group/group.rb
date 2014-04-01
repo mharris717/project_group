@@ -6,13 +6,19 @@ module ProjectGroup
     def <<(path)
       self.singles_inner << Single.new(:path => path)
     end
+    fattr(:real_single_order) do
+      ec("/code/orig/dep_local/bin/group_dep_order #{name}").split("\n")
+    end
     def sort_index(single)
-      (single_order || []).each_with_index do |o,i|
+      (real_single_order || []).each_with_index do |o,i|
         return i if single.name.to_s == o.to_s || single.short_name.to_s == o.to_s
       end
       9999
     end
     def singles
+      singles_inner
+    end
+    def ordered_singles
       singles_inner.sort_by { |x| sort_index(x) }
     end
     def singles=(x)

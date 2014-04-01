@@ -60,7 +60,7 @@ module ProjectGroup
       if project_name
         singles_for_project_name
       else
-        group.singles
+        group.ordered_singles
       end
     end
 
