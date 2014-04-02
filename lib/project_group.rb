@@ -82,3 +82,11 @@ ProjectGroup.register_plugin("tasks", use_group: true) do |proj,ops|
     puts "TASK #{proj.short_name}:#{task}"
   end
 end
+
+ProjectGroup.register_plugin("fury", use_group: true) do |proj,ops|
+  proj.eci "rm -r pkg" if FileTest.exist?("#{proj.path}/pkg")
+  proj.eci "gamble_exec rake build"
+  file = Dir["#{proj.path}/pkg/*.gem"].first
+  raise "bad" unless file.present?
+  proj.eci "fury push #{file}"
+end

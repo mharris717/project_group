@@ -5,8 +5,10 @@ module ProjectGroup
     def repo; proj.repo; end
 
     def gemspec!
-      repo.cmd "gamble_exec rake gemspec"
-      fix_gemspec!
+      if proj.type == :gem
+        repo.cmd "gamble_exec rake gemspec"
+        fix_gemspec!
+      end
     end
 
     def fix_gemspec!
@@ -14,8 +16,8 @@ module ProjectGroup
     end
 
     def build_deps!
-      repo.cmd "gamble_exec --bundlecmd install && gamble_exec rake gemspec"
-      fix_gemspec!
+      repo.cmd "gamble_exec --bundlecmd install"
+      gemspec!
     end
 
     def push!
@@ -35,7 +37,7 @@ module ProjectGroup
     end
 
     def all!
-      gemspec!
+      gemspec! 
       commit_dep_files!
       push!
     end

@@ -174,7 +174,7 @@ end
 
     def gemspec
       singles.each do |proj|
-        puts `cd #{proj.base_path} && rake gemspec`
+        proj.eci "gamble_exec rake gemspec"
       end
     end
 
