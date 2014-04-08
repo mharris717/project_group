@@ -4,7 +4,10 @@ module ProjectGroup
     attr_accessor :group
     def as_json
       folders = group.singles.sort_by { |x| x.short_name }.map do |proj|
-        {"path" => proj.path, "name" => proj.short_name, "folder_exclude_patterns" => ["tmp","junk",".bundle","dist","node_modules"]}
+        {"path" => proj.path, 
+         "name" => proj.short_name, 
+         "folder_exclude_patterns" => ["tmp","junk",".bundle","dist","node_modules","pkg","coverage","junk"],
+         "file_exclude_patterns" => [".rspec",".document","LICENSE.txt","*.gemspec","README.rdoc",".overapp"]}
       end
       {"folders" => folders}
     end
