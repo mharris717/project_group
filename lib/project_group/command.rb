@@ -9,18 +9,8 @@ class File
 end
 
 module ProjectGroup
-  class Command
-    include FromHash
-    attr_accessor :cmd, :group_name, :project_name, :remaining_args, :use_group
 
-    fattr(:configs) do
-      Configs.loaded
-    end
-
-    fattr(:dir) do
-      Dir.getwd
-    end
-
+  module DetermineProjects
     fattr(:group) do
       # explicit group name given: use entire group
       if group_name
@@ -47,12 +37,22 @@ module ProjectGroup
     end
 
     def singles_for_project_name
+      if project_name.to_s.strip == '.'
+        return [configs.single_for_dir(dir, safe: true)]
+      end
+
+      # project_name can be comma delimited list of multiple, turn into a list
       names = project_name.split(",")
+
+      # looking in all groups, get matching singles
       res = configs.all_singles.select { |x| names.include?(x.name) }
+
+      # if current dir has a group, also look more closely at singles in that group
       g = configs.group_for_dir(dir)
       if g
         res += g.singles.select { |x| names.include?(x.short_name) }
       end
+
       res.uniq
     end
 
@@ -62,6 +62,21 @@ module ProjectGroup
       else
         group.ordered_singles
       end
+    end
+  end
+
+  class Command
+    include FromHash
+    include DetermineProjects
+
+    attr_accessor :cmd, :group_name, :project_name, :remaining_args, :use_group
+
+    fattr(:configs) do
+      Configs.loaded
+    end
+
+    fattr(:dir) do
+      Dir.getwd
     end
 
     def run!
@@ -174,7 +189,7 @@ end
 
     def gemspec
       singles.each do |proj|
-        proj.eci "gamble_exec rake gemspec"
+        proj.eci "bundle exec rake gemspec"
       end
     end
 

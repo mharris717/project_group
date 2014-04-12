@@ -16,7 +16,7 @@ end
 module ProjectGroup
   class << self
     def load!
-      %w(plugin single repo group command config sublime_project run_tests git_tasks).each do |f|
+      %w(plugin single repo group command config sublime_project run_tests git_tasks reach).each do |f|
         load File.dirname(__FILE__) + "/project_group/#{f}.rb"
       end
 
@@ -77,7 +77,7 @@ ProjectGroup.register_plugin("tasks", use_group: true) do |proj,ops|
   #names = ops[:group].singles.map { |x| x.short_name } + ['define_task']
   #local = names.join(",")
   #cmd = "/code/orig/local_exec/bin/local_exec --addl mongoid_gem_config,define_task --local #{local} list_rake_tasks"
-  cmd = "gamble_exec list_rake_tasks"
+  cmd = "bundle exec list_rake_tasks"
   proj.eci(cmd, silent: true).split("\n").each do |task|
     puts "TASK #{proj.short_name}:#{task}"
   end
@@ -85,7 +85,7 @@ end
 
 ProjectGroup.register_plugin("fury", use_group: true) do |proj,ops|
   proj.eci "rm -r pkg" if FileTest.exist?("#{proj.path}/pkg")
-  proj.eci "gamble_exec rake build"
+  proj.eci "bundle exec rake build"
   file = Dir["#{proj.path}/pkg/*.gem"].first
   raise "bad" unless file.present?
   proj.eci "fury push #{file}"

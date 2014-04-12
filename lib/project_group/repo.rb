@@ -43,6 +43,7 @@ module ProjectGroup
       return false if f =~ /public\/assets/
       return false if f.split(".").last == "log"
       return false if f =~ /testflight_launcher/
+      return false if f =~ /time\.txt/
       true
     end
 
@@ -86,7 +87,12 @@ module ProjectGroup
     end 
 
     def commit_dep_files!
-      ec "cd #{path} && git add Gemfile Gemfile.lock *.gemspec && git commit -m 'Dep Files'"
+      gemspec = if Dir["#{path}/*.gemspec"].size > 0
+        "*.gemspec"
+      else
+        ""
+      end
+      ec "cd #{path} && git add Gemfile Gemfile.lock #{gemspec} && git commit -m 'Dep Files'"
     end
 
     def ensure_dep_files!
