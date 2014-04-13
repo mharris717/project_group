@@ -27,6 +27,7 @@ module ProjectGroup
     def commit_dep_files!
       if repo.changes? && repo.only_dep_changes?
         self.changed = true
+        puts "committing dep"
         repo.commit_dep_files!
       end
     end
