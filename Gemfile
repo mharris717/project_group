@@ -33,5 +33,6 @@ end
 gem 'mharris_ext'
 gem 'andand'
 gem 'grit'
+
 private_gem 'mongoid_gem_config'
 private_gem 'remote_cache'

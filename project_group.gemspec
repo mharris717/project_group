@@ -56,7 +56,14 @@ Gem::Specification.new do |s|
     "spec/support/ec.rb",
     "spec/support/make_initial.rb",
     "tags",
-    "tags.old"
+    "tags.old",
+    "vol/deps.inspect",
+    "vol/full_deps.inspect",
+    "vol/grit_diff.rb",
+    "vol/mock_deps.rb",
+    "vol/pipe_test.rb",
+    "vol/shell_test.rb",
+    "vol/test/.project_group.rb"
   ]
   s.homepage = "http://github.com/mharris717/project_group"
   s.licenses = ["MIT"]
