@@ -43,7 +43,7 @@ module ProjectGroup
       return false if f =~ /public\/assets/
       return false if f.split(".").last == "log"
       return false if f =~ /testflight_launcher/
-      return false if f =~ /time\.txt/
+      return false if f =~ /(time|load)\.txt/
       true
     end
 
