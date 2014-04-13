@@ -1,7 +1,7 @@
 module ProjectGroup
   class GitTasks
     include FromHash
-    attr_accessor :proj
+    attr_accessor :proj, :changed
     def repo; proj.repo; end
 
     def gemspec!
@@ -26,6 +26,7 @@ module ProjectGroup
 
     def commit_dep_files!
       if repo.changes? && repo.only_dep_changes?
+        self.changed = true
         repo.commit_dep_files!
       end
     end
@@ -49,9 +50,16 @@ module ProjectGroup
       all!
 
       if repo.changes?
+        self.changed = true
         gt!
         all!
         raise "still changes" if repo.changes?
+      end
+
+      if changed
+        if %w(mongoid_gem_config define_task).include?(proj.short_name)
+          repo.cmd "bundle exec rake install"
+        end
       end
     end
   end
