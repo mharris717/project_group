@@ -4,18 +4,24 @@ module ProjectGroup
     attr_accessor :proj, :changed
     def repo; proj.repo; end
 
+    def gem?
+      proj.type.to_s == 'gem'
+    end
+
     def gemspec!
-      if proj.type == :gem
+      if gem?
         repo.cmd "bundle exec rake gemspec"
         fix_gemspec!
       end
     end
 
     def fix_gemspec!
+      return unless gem?
       repo.git("checkout HEAD #{proj.short_name}.gemspec") if repo.only_gemspec_date_change?
     end
 
     def build_deps!
+      return unless gem?
       repo.cmd "bundle install"
       gemspec!
     end
@@ -25,6 +31,7 @@ module ProjectGroup
     end
 
     def commit_dep_files!
+      return unless gem?
       if repo.changes? && repo.only_dep_changes?
         self.changed = true
         puts "committing dep"
