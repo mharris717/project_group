@@ -1,6 +1,38 @@
 module ProjectGroup
+  module RunLog
+    def run_log_dir
+      File.expand_path("~/.project_group/run_logs")
+    end
+
+    def delete_run_log!(proj)
+      f = "#{run_log_dir}/#{proj.short_name}.txt"
+      `rm #{f}` if FileTest.exist?(f)
+
+      f = "#{run_log_dir}/success.txt"
+      puts "Append to #{f}"
+      File.append "#{run_log_dir}/success.txt","#{proj.short_name}\n"
+    end
+
+    def write_run_log!(proj,message)
+      `mkdir -p #{run_log_dir}`
+      f = "#{run_log_dir}/#{proj.short_name}.txt"
+      File.create f, message
+    end
+
+    def clear_run_logs!
+      `mkdir -p #{run_log_dir}`
+
+      Dir["#{run_log_dir}/*.txt"].each do |f|
+        `rm #{f}`
+      end
+
+      File.create "#{run_log_dir}/success.txt",""
+    end
+  end
+
   class Reach
     include FromHash
+    include RunLog
     attr_accessor :group, :command
     def projects
       group.ordered_singles
@@ -11,8 +43,10 @@ module ProjectGroup
     def run_proj(proj)
       res = proj.eci(command)
       results[proj] = {success: true, time: Time.now, result: res, project: proj}
+      delete_run_log! proj
     rescue => exp
       results[proj] = {success: false, time: Time.now, result: exp, project: proj}
+      write_run_log! proj, exp.message
     end
 
     def not_yet_run
@@ -44,6 +78,7 @@ module ProjectGroup
     end
 
     def run!
+      clear_run_logs!
       puts to_s
 
       while next_projects.size > 0
