@@ -65,7 +65,7 @@ ProjectGroup.register_plugin("reach", use_group: true) do |proj,ops|
 end
 
 ProjectGroup.register_plugin("gt", use_group: true) do |proj,ops|
-  if proj.repo.changes?
+  if proj.repo.changes? && !proj.repo.only_dep_changes?
     proj.eci "gittower -s"
     puts "Enter to Continue:"
     STDIN.gets
