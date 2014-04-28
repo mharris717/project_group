@@ -8,6 +8,10 @@ module ProjectGroup
       proj.type.to_s == 'gem'
     end
 
+    def gemfile?
+      gem? || proj.type.to_s == 'rails'
+    end
+
     def gemspec!
       if gem?
         repo.cmd "bundle exec rake gemspec"
@@ -21,9 +25,10 @@ module ProjectGroup
     end
 
     def build_deps!
-      return unless gem?
-      repo.cmd "bundle install"
-      gemspec!
+      repo.cmd "bundle install" if gemfile?
+      if gem?
+        gemspec!
+      end
     end
 
     def push!
@@ -31,7 +36,7 @@ module ProjectGroup
     end
 
     def commit_dep_files!
-      return unless gem?
+      return unless gemfile?
       if repo.changes? && repo.only_dep_changes?
         self.changed = true
         puts "committing dep"
