@@ -1,6 +1,6 @@
 GIT
   remote: https://0bb047fe3ee12dd67af1fc2d6616d73c191912cd:x-oauth-basic@github.com/mharris717/mongoid_gem_config.git
-  revision: e294f613f27cd9c9de33f6ceb257308448a4db37
+  revision: e98e314d4d3311a74869a62f7cb6bf5f5c9f70b1
   branch: master
   specs:
     mongoid_gem_config (0.3.0)
@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://0bb047fe3ee12dd67af1fc2d6616d73c191912cd:x-oauth-basic@github.com/mharris717/remote_cache.git
-  revision: 3566aa49d067406a398f4e8aa714862bf73fa9c2
+  revision: f8db7a8ecf764002ff435459b62b08d647d905cb
   branch: master
   specs:
     remote_cache (0.0.1)
