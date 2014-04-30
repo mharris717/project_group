@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://0bb047fe3ee12dd67af1fc2d6616d73c191912cd:x-oauth-basic@github.com/mharris717/remote_cache.git
-  revision: f4aa7cf06463bd3743860c17883fa3a7542ebf31
+  revision: b2352a96e20a3e57de85b3a7b0481ef95945365e
   branch: master
   specs:
     remote_cache (0.0.1)
