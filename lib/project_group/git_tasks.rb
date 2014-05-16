@@ -70,7 +70,7 @@ module ProjectGroup
       end
 
       if changed
-        if %w(mongoid_gem_config define_task).include?(proj.short_name)
+        if %w(mongoid_gem_config define_task mharris_spec).include?(proj.short_name)
           repo.cmd "bundle exec rake install"
         end
       end
