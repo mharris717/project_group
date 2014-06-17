@@ -21,7 +21,9 @@ module ProjectGroup
 
     def fix_gemspec!
       return unless gem?
-      repo.git("checkout HEAD #{proj.short_name}.gemspec") if repo.only_gemspec_date_change?
+      n = proj.short_name
+      n = "baseball_server" if n == 'server'
+      repo.git("checkout HEAD #{n}.gemspec") if repo.only_gemspec_date_change?
     end
 
     def build_deps!
@@ -57,7 +59,13 @@ module ProjectGroup
     end
 
 
-    def run!
+    def run!(ops={})
+      if ops[:only_if_changes]
+        if !repo.changes? || repo.only_dep_changes?
+          return
+        end
+      end
+
       puts "Doing git for #{proj.short_name}"
       build_deps!
       all!
@@ -79,5 +87,8 @@ module ProjectGroup
 
   register_plugin("gitp", use_group: true) do |proj|
     GitTasks.new(proj: proj).run!
+  end
+  register_plugin("gitps", use_group: true) do |proj|
+    GitTasks.new(proj: proj).run! only_if_changes: true
   end
 end
