@@ -62,6 +62,7 @@ module ProjectGroup
     def run!(ops={})
       if ops[:only_if_changes]
         if !repo.changes? || repo.only_dep_changes?
+          puts "Skipping #{proj.short_name}"
           return
         end
       end
