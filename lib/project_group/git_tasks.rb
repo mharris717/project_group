@@ -86,10 +86,10 @@ module ProjectGroup
     end
   end
 
-  register_plugin("gitp", use_group: true) do |proj|
+  register_plugin("gitpf", use_group: true) do |proj|
     GitTasks.new(proj: proj).run!
   end
-  register_plugin("gitps", use_group: true) do |proj|
+  register_plugin("gitp", use_group: true) do |proj|
     GitTasks.new(proj: proj).run! only_if_changes: true
   end
 end
