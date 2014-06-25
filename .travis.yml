@@ -4,3 +4,5 @@ rvm:
   - 1.9.3
 services:
   - mongodb
+env:
+  - GITHUB_TOKEN=0bb047fe3ee12dd67af1fc2d6616d73c191912cd
