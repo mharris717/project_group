@@ -7,7 +7,11 @@ module ProjectGroup
       self.singles_inner << Single.new(:path => path)
     end
     fattr(:real_single_order) do
-      ec("/code/orig/dep_local/bin/group_dep_order #{name}").split("\n")
+      if FileTest.exist?("/code/orig/dep_local/bin/group_dep_order")
+        ec("/code/orig/dep_local/bin/group_dep_order #{name}").split("\n")
+      else
+        []
+      end
     end
     def sort_index(single)
       (real_single_order || []).each_with_index do |o,i|
