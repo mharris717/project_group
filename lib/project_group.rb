@@ -66,7 +66,7 @@ end
 
 ProjectGroup.register_plugin("gt", use_group: true) do |proj,ops|
   if proj.repo.changes? && !proj.repo.only_dep_changes?
-    proj.eci "gittower -s"
+    proj.eci "gittower #{proj.path}"
     puts "Enter to Continue:"
     STDIN.gets
   end

@@ -47,7 +47,7 @@ module ProjectGroup
     end
 
     def gt!
-      ec "gittower -s #{proj.path}"
+      ec "gittower #{proj.path}"
       puts "Enter to Continue"
       STDIN.gets
     end

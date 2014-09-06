@@ -44,6 +44,8 @@ module ProjectGroup
       return false if f.split(".").last == "log"
       return false if f =~ /testflight_launcher/
       return false if f =~ /(time|load)\.txt/
+      return false if f =~ /dump\.rdb/
+      return false if f =~ /profiles\//
       true
     end
 
