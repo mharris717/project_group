@@ -47,3 +47,18 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+def test_once
+  pid = fork do
+    exec "bundle exec rake"
+  end
+
+  Process.wait pid
+end
+
+task :testm do
+  loop do
+    test_once
+    sleep 1
+  end
+end
