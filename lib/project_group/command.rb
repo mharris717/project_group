@@ -11,6 +11,10 @@ end
 module ProjectGroup
 
   module DetermineProjects
+    def on_fly_group
+      single = ProjectGroup::Single.new(path: File.expand_path("."), name: "thing", type: :unknown)
+      ProjectGroup::Group.new(name: "flygroup", singles_inner: [single])
+    end
     fattr(:group) do
       # explicit group name given: use entire group
       if group_name
@@ -28,6 +32,8 @@ module ProjectGroup
           s = configs.single_for_dir(dir)
           OpenStruct.new(:singles => [s])
         end
+      elsif on_fly
+        on_fly_group
       end.tap do |res| 
         if !res
           str = ["No Group found for #{dir}",configs.to_s].join("\n")
@@ -69,7 +75,7 @@ module ProjectGroup
     include FromHash
     include DetermineProjects
 
-    attr_accessor :cmd, :group_name, :project_name, :remaining_args, :use_group
+    attr_accessor :cmd, :group_name, :project_name, :remaining_args, :use_group, :on_fly
 
     fattr(:configs) do
       Configs.loaded
@@ -245,6 +251,10 @@ end
 
         opts.on("-g", "--group", "Use Group") do |v|
           self.use_group = v
+        end
+
+        opts.on("-f", "--onfly","On Fly") do |v|
+          self.on_fly = v
         end
       end.parse!(args)
       self.cmd = args.first
