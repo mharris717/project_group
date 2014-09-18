@@ -90,3 +90,18 @@ ProjectGroup.register_plugin("fury", use_group: true) do |proj,ops|
   raise "bad" unless file.present?
   proj.eci "fury push #{file}"
 end
+
+ProjectGroup.register_plugin('cdp', use_group: true) do |proj,ops|
+  target = ops[:remaining_args].first_only
+  if target == proj.short_name
+    puts "cd #{proj.path}"
+    exit
+  end
+end
+
+class Object
+  def first_only
+    raise "bad size #{count}" unless count == 1
+    first
+  end
+end
