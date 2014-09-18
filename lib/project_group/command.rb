@@ -26,8 +26,10 @@ module ProjectGroup
   module DetermineProjects
     attr_accessor :group_method_used
     def on_fly_group
-      single = ProjectGroup::Single.new(path: File.expand_path("."), name: "thing", type: :unknown)
-      ProjectGroup::Group.new(name: "flygroup", singles_inner: [single])
+      path = File.expand_path(".")
+      name = File.basename(path)
+      single = ProjectGroup::Single.new(path: path, name: name, type: :unknown)
+      ProjectGroup::Group.new(name: name, singles_inner: [single])
     end
     fattr(:group) do
       # explicit group name given: use entire group
