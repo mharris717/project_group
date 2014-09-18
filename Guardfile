@@ -14,16 +14,29 @@ guard 'spork', :rspec_port => 5710 do
   watch(%r{^spec/support/.+\.rb$})
 end
 
-guard 'rspec', :cli => "--drb --drb-port 5710" do
-  watch(%r{^spec/.+_spec\.rb$}) 
-  watch(%r{^lib/(.+)\.rb$})   { "spec" } # { |m| "spec/lib/#{m[1]}_spec.rb" }
-  watch(%r{^lib/(.+)\.treetop$})   { "spec" }
-  watch(%r{^lib/(.+)\.csv$})   { "spec" }
-  #watch(%r{^spec/support/(.+)\.rb$})   { "spec" }
-  watch('spec/spec_helper.rb')  { "spec" }
+def test_once
+  pid = fork do
+    exec "bundle exec rake"
+  end
+
+  Process.wait pid
 end
 
-
-
+if true
+  guard 'rspec', :cli => "--drb --drb-port 5710" do
+    watch(%r{^spec/.+_spec\.rb$}) 
+    watch(%r{^lib/(.+)\.rb$})   { "spec" } # { |m| "spec/lib/#{m[1]}_spec.rb" }
+    watch(%r{^lib/(.+)\.treetop$})   { "spec" }
+    watch(%r{^lib/(.+)\.csv$})   { "spec" }
+    #watch(%r{^spec/support/(.+)\.rb$})   { "spec" }
+    watch('spec/spec_helper.rb')  { "spec" }
+  end
+else
+  guard :shell do
+    watch /.*/ do |m|
+      test_once
+    end
+  end
+end
 
 

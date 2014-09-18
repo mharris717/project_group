@@ -61,6 +61,8 @@ GEM
       thor (>= 0.18.1)
     guard-rspec (1.2.1)
       guard (>= 1.1)
+    guard-shell (0.6.1)
+      guard (>= 1.1.0)
     guard-spork (1.5.1)
       childprocess (>= 0.2.3)
       guard (>= 1.1)
@@ -150,6 +152,7 @@ DEPENDENCIES
   grit
   guard
   guard-rspec
+  guard-shell
   guard-spork
   jeweler (~> 1.8.7)
   lre

@@ -22,6 +22,7 @@ group :development do
  gem 'guard'
  gem 'guard-rspec'
  gem 'guard-spork'
+ gem 'guard-shell'
 
  gem 'rb-fsevent', '~> 0.9'
 
