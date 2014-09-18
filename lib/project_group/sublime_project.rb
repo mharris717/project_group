@@ -6,13 +6,28 @@ module ProjectGroup
       folders = group.singles.sort_by { |x| x.short_name }.map do |proj|
         {"path" => proj.path, 
          "name" => proj.short_name, 
-         "folder_exclude_patterns" => ["tmp","junk",".bundle","dist","node_modules","pkg","coverage","junk"],
-         "file_exclude_patterns" => [".rspec",".document","LICENSE.txt","*.gemspec","README.rdoc",".overapp"]}
+         "folder_exclude_patterns" => folder_exclude_patterns(proj),
+         "file_exclude_patterns" => file_exclude_patterns(proj)}
       end
       {"folders" => folders}
     end
     def to_json
       as_json.to_json
+    end
+
+    def folder_exclude_patterns(proj)
+      res = []
+      res += ["tmp","junk",".bundle","dist","node_modules","pkg","coverage","junk","bower_components"]
+      res += ["__pycache__"]
+      res += ["lib","bin","include"] if proj.type.to_s == 'python'
+      res
+    end
+
+    def file_exclude_patterns(proj)
+      res = [".rspec",".document","LICENSE.txt","*.gemspec","README.rdoc",".overapp","npm-debug.log"]
+      res += [".editorconfig",".bowerrc",".gitkeep"]
+      res += ["__init__.py"]
+      res
     end
 
     fattr(:path) do
