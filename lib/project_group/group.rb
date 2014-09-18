@@ -6,8 +6,11 @@ module ProjectGroup
     def <<(path)
       self.singles_inner << Single.new(:path => path)
     end
+    fattr(:group_dep_order_path) do
+      "/code/orig/dep_local/bin/group_dep_order"
+    end
     fattr(:real_single_order) do
-      if FileTest.exist?("/code/orig/dep_local/bin/group_dep_order")
+      if FileTest.exist?(group_dep_order_path)
         ec("/code/orig/dep_local/bin/group_dep_order #{name}").split("\n")
       else
         []
@@ -19,12 +22,19 @@ module ProjectGroup
       end
       9999
     end
-    def singles
-      singles_inner
+
+    def singles_inner_safe
+      singles_inner.tap { |x| raise "singles_inner is empty #{x.class}" unless x && x.size > 0 }
     end
-    def ordered_singles
-      singles_inner.sort_by { |x| sort_index(x) }
+
+    def singles(ops={})
+      if ops[:order]
+        ordered_singles
+      else
+        singles_inner_safe
+      end
     end
+    
     def singles=(x)
       self.singles_inner = x
     end
@@ -41,6 +51,11 @@ module ProjectGroup
       res << "Singles (#{singles.size}): "
       singles.each { |x| res << x.to_s }
       res.join("\n")
+    end
+
+    private
+    def ordered_singles
+      singles_inner_safe.sort_by { |x| sort_index(x) }
     end
   end
 end

@@ -9,8 +9,22 @@ class File
 end
 
 module ProjectGroup
+  class MockGroup
+    include FromHash
+    attr_accessor :singles_inner
+    %w(singles_inner_safe ordered_singles).each do |m|
+      define_method(m) { singles_inner }
+    end
+    def singles=(x)
+      self.singles_inner = x
+    end
+    def singles(ops={})
+      singles_inner
+    end
+  end
 
   module DetermineProjects
+    attr_accessor :group_method_used
     def on_fly_group
       single = ProjectGroup::Single.new(path: File.expand_path("."), name: "thing", type: :unknown)
       ProjectGroup::Group.new(name: "flygroup", singles_inner: [single])
@@ -18,23 +32,31 @@ module ProjectGroup
     fattr(:group) do
       # explicit group name given: use entire group
       if group_name
+        self.group_method_used = "group_name"
         configs.groups.find { |x| x.name == group_name }
 
       # we have a local config file
       elsif configs.local_group
+        self.group_method_used = "configs.local_group"
         configs.local_group
 
       # working dir is part of a group
       elsif configs.group_for_dir(dir)
+        
         if use_group
+          self.group_method_used = "group_for_dir use_group"
           configs.group_for_dir(dir)
         else
+          self.group_method_used = "group_for_dir single_for_dir"
           s = configs.single_for_dir(dir)
-          OpenStruct.new(:singles => [s])
+          raise "no single" unless s
+          MockGroup.new(singles: [s])
         end
       elsif on_fly
+        self.group_method_used = "on_fly"
         on_fly_group
       end.tap do |res| 
+        #puts "Method Used: #{group_method_used}"
         if !res
           str = ["No Group found for #{dir}",configs.to_s].join("\n")
           raise str
@@ -66,8 +88,8 @@ module ProjectGroup
       if project_name
         singles_for_project_name
       else
-        group.ordered_singles
-      end
+        group.singles order: order_singles
+      end.tap { |x| raise "no singles #{x.class}" unless x && x.size > 0 }
     end
   end
 
@@ -75,7 +97,7 @@ module ProjectGroup
     include FromHash
     include DetermineProjects
 
-    attr_accessor :cmd, :group_name, :project_name, :remaining_args, :use_group, :on_fly
+    attr_accessor :cmd, :group_name, :project_name, :remaining_args, :use_group, :on_fly, :order_singles
 
     fattr(:configs) do
       Configs.loaded
@@ -88,8 +110,7 @@ module ProjectGroup
     def run!
       configs
       if Plugins.instance.has?(cmd)
-        self.use_group = true if Plugins.instance.option(cmd,:use_group) || Plugins.instance.option(cmd,:level) == :group
-        Plugins.instance.run(cmd, singles, :remaining_args => remaining_args, :group => group)
+        Plugins.instance.full_run(self, :remaining_args => remaining_args)
       else
         send(cmd)
       end

@@ -33,10 +33,17 @@ module ProjectGroup
       if plugin.group_level?
         plugin.call ops[:group],ops
       else
+        raise "no singles #{singles.class}" unless singles && singles.size > 0
         singles.each do |s|
           plugin.call(s,ops)
         end
       end
+    end
+    def full_run(command,ops={})
+      command.use_group = true if option(command.cmd,:use_group) || (option(command.cmd,:level) == :group)
+      command.order_singles = true if option(command.cmd,:order_singles)
+      ops[:group] = command.group
+      run(command.cmd,command.singles,ops)
     end
     def option(cmd,op)
       res = get(cmd)
