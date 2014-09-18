@@ -34,7 +34,7 @@ module ProjectGroup
     end
 
     def push!
-      repo.git("push origin master:master") if !repo.pushed?
+      repo.git("push origin master:master") if repo.has_remote? && !repo.pushed?
     end
 
     def commit_dep_files!

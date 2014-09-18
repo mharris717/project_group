@@ -138,6 +138,10 @@ module ProjectGroup
       end
     end
 
+    def has_remote?
+      git(:remote).present?
+    end
+
     def only_gemspec_date_change?
       c = changed_files
       return false unless c[:added].empty? || c[:untracked].empty?

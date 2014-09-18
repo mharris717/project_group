@@ -70,7 +70,7 @@ ProjectGroup.register_plugin("gt", use_group: true) do |proj,ops|
     puts "Enter to Continue:"
     STDIN.gets
   end
-  proj.eci "git push origin master:master"
+  proj.eci "git push origin master:master" if proj.repo.has_remote?
 end
 
 ProjectGroup.register_plugin("tasks", use_group: true) do |proj,ops|
